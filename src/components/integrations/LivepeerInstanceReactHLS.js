@@ -15,7 +15,7 @@ function LivepeerInstance() {
       <ReactHLS
         width="100%"
         height="100%"
-        url="http://livepeer.interspace.chat:8935/stream/ethturin.m3u8"
+        url="http://video.interspace.chat:8935/stream/ethturin.m3u8"
         allowfullscreen
       />
     </LivepeerContainer>
