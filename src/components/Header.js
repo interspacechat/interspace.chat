@@ -4,6 +4,7 @@ import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 import { useTheme } from "../contexts/ThemeContext";
 import Credits from "./Credits";
+import Vr from "./Vr";
 
 import LightOn from "../img/light-on.png";
 import LightOff from "../img/light-off.png";
@@ -61,7 +62,6 @@ const LightSwitch = styled.button`
   background: unset;
   cursor: pointer;
   font-size: 26px;
-  color: ;
 `;
 
 const Header = () => {
@@ -81,6 +81,7 @@ const Header = () => {
           )}
         </LightSwitch>
       </LogoSpan>
+      <Vr />
       <HelpStyled onClick={() => addFloatingSpace("help")}>Help</HelpStyled>
       <Credits />
     </HeaderContainer>
