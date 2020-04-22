@@ -13,7 +13,7 @@ import RoomInstance from "./integrations/RoomInstance";
 import LivestreamLinkInstance from "./integrations/LivestreamLinksInstance";
 
 import AboutInstance from "./external-sites/AboutInstance";
-import LivepeerInstance from "./integrations/LivepeerInstanceReactHLS";
+import LivepeerInstance from "./integrations/LivepeerInstance";
 import DonateInstance from "./external-sites/DonateInstance";
 import RaffleInstance from "./external-sites/RaffleInstance";
 import HelpInstance from "./external-sites/HelpInstance";
@@ -165,7 +165,10 @@ function FloatingRoomWindow() {
       windowOriginX = width;
     } else if (windowKey === "youtube" || windowKey === "livepeer") {
       windowOriginX = 20;
-    } else if (windowKey === "VHackathon ETH Turin" || windowKey === "Gitcoin") {
+    } else if (
+      windowKey === "VHackathon ETH Turin" ||
+      windowKey === "Gitcoin"
+    ) {
       windowOriginX = width / 3;
     } else if (
       windowKey === "help" ||
@@ -181,7 +184,11 @@ function FloatingRoomWindow() {
   };
   const setStartingCoordinatesY = (windowKey) => {
     let windowOriginY = 40;
-    if (windowKey === "VHackathon ETH Turin" || windowKey === "Gitcoin" || windowKey === "discord chat") {
+    if (
+      windowKey === "VHackathon ETH Turin" ||
+      windowKey === "Gitcoin" ||
+      windowKey === "discord chat"
+    ) {
       windowOriginY = 40;
     } else if (windowKey === "calendar") {
       windowOriginY = height + 10;

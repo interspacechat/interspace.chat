@@ -14,14 +14,14 @@
   var video0 = document.getElementById('video0');
   if(Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('http://video.interspace.chat:8935/stream/ethturin.m3u8');
+    hls.loadSource('https://video.interspace.chat:8935/stream/ethturin.m3u8');
     hls.attachMedia(video0);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video0.play();
   });
  }
   else if (video0.canPlayType('application/vnd.apple.mpegurl')) {
-    video0.src = 'http://video.interspace.chat:8935/stream/ethturin.m3u8'; video0.addEventListener('loadedmetadata',function() {
+    video0.src = 'https://video.interspace.chat:8935/stream/ethturin.m3u8'; video0.addEventListener('loadedmetadata',function() {
       video0.play();
     });
   }
