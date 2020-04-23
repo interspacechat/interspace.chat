@@ -54,6 +54,20 @@ const Credits = () => {
   return (
     <CreditsStyled>
       <Collapsible trigger="Credits">
+        <p>Conference:</p>
+        <ul>
+          <StyledListItem>
+            Organized by{" "}
+            <a
+              href="https://ethturin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://ethturin.com
+            </a>{" "}
+          </StyledListItem>
+        </ul>
+        <hr />
         <p>Art used:</p>
         <ul>
           <StyledListItem>
@@ -120,7 +134,7 @@ const Credits = () => {
             </a>
           </StyledListItem>
           <StyledListItem>
-            Donate to our interspace.chat{" "}
+            Donate to interspace.chat{" "}
             <a
               href="https://gitcoin.co/grants/516/interspacechat"
               target="_blank"
@@ -136,7 +150,7 @@ const Credits = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              noncon.eth
+              support.interspacechat.eth
             </a>{" "}
           </StyledListItem>
           <StyledListItem>

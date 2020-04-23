@@ -2,8 +2,9 @@ import React, { useContext } from "react"
 import styled from "@emotion/styled"
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext"
 
-import { useTheme } from "../contexts/ThemeContext"
-import Credits from "./Credits"
+import { useTheme } from "../contexts/ThemeContext";
+import Credits from "./Credits";
+import Vr from "./Vr";
 import EthturinSidebar from "./EthturinSidebar"
 
 import LightOn from "../img/light-on.png"
@@ -81,6 +82,7 @@ const Header = () => {
 					)}
 				</LightSwitch>
 			</LogoSpan>
+      <Vr />
 			<HelpStyled onClick={() => addFloatingSpace("help")}>Help</HelpStyled>
 			<Credits />
 			<EthturinSidebar />
