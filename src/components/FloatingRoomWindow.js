@@ -40,6 +40,8 @@ const SpaceHeaderElement = styled.div`
   margin: 0.5rem;
 `;
 const SpaceContainer = styled.div`
+  position: relative;
+  z-index: 100;
   width: 100%;
   height: 100%;
   display: flex;
