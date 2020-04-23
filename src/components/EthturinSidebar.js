@@ -5,37 +5,32 @@ import Collapsible from "react-collapsible"
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext"
 
 const SitemapStyled = styled.nav`
-  text-align: left;
+	text-align: left;
 
-  .Collapsible__trigger {
-    color: ${(props) => props.theme.color};
-    background-color: ${(props) => props.theme.background};
-    cursor: pointer;
-    padding: 0.2rem;
-    :hover {
-      background-color: ${(props) => props.theme.highlight};
-    }
-  }
-  .Collapsible__contentOuter {
-    max-width: 300px;
+	.Collapsible__trigger {
+		color: ${(props) => props.theme.color};
+		background-color: ${(props) => props.theme.background};
+		cursor: pointer;
+		padding: 0.2rem;
+		:hover {
+			background-color: ${(props) => props.theme.highlight};
+		}
+	}
+	.Collapsible__contentOuter {
+		max-width: 300px;
 
-    :hover {
-      .Collapsible__contentInner {
-      }
-    }
-  }
-  .Collapsible__contentInner {
-    padding: 0.5rem;
+		:hover {
+			.Collapsible__contentInner {
+			}
+		}
+	}
+	.Collapsible__contentInner {
+		padding: 0.5rem;
 
-    a {
-      color: ${(props) => props.theme.highlight};}
-    }
-  }
-`
-
-const ImagemapContainer = styled.div`
-	max-width: 40vw;
-	margin: auto auto;
+		a {
+			color: ${(props) => props.theme.highlight};
+		}
+	}
 `
 
 const Grid = styled.div`

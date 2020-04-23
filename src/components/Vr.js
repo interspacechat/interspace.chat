@@ -1,11 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import Collapsible from "react-collapsible";
-
-import Titanembeds from "../img/titanembeds.png";
-import Jitsilogo from "../img/jitsi.png";
-
-import ShareButton from "./ShareButton";
+import React from "react"
+import styled from "@emotion/styled"
+import Collapsible from "react-collapsible"
 
 const VrStyled = styled.nav`
   text-align: left;
@@ -34,42 +29,32 @@ const VrStyled = styled.nav`
       color: ${(props) => props.theme.highlight};}
     }
   }
-`;
+`
 
 const StyledListItem = styled.li`
-  list-style-type: none;
-  padding: 1rem;
-`;
-
-const StyledListLink = styled.li`
-  list-style-type: none;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  grid-gap: 0.5rem;l
-`;
+	list-style-type: none;
+	padding: 1rem;
+`
 
 const Vr = () => {
-  return (
-    <VrStyled>
-      <Collapsible trigger="Vr">
-        <p>VR Space:</p>
-        <ul>
-          <StyledListItem>
-            Visit an Italian Crypto Art Exhibition in Cryptovoxels:{" "}
-            <a
-              href="https://www.cryptovoxels.com/play?coords=NW@72W,76S"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CR(Y)PTALY
-            </a>{" "}
-          </StyledListItem>
-        </ul>
-      </Collapsible>
-    </VrStyled>
-  );
-};
+	return (
+		<VrStyled>
+			<Collapsible trigger="Vr">
+				<p>VR Space:</p>
+				<ul>
+					<StyledListItem>
+						Visit an Italian Crypto Art Exhibition in Cryptovoxels:{" "}
+						<a
+							href="https://www.cryptovoxels.com/play?coords=NW@72W,76S"
+							target="_blank"
+							rel="noopener noreferrer">
+							CR(Y)PTALY
+						</a>{" "}
+					</StyledListItem>
+				</ul>
+			</Collapsible>
+		</VrStyled>
+	)
+}
 
-export default Vr;
+export default Vr
