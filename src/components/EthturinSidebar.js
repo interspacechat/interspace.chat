@@ -57,7 +57,11 @@ const Grid = styled.div`
 	}
 `
 
-const Cell1 = styled.div``
+const Cell1 = styled.div`
+	img {
+		height: 36px;
+	}
+`
 
 const Cell2 = styled.div``
 
@@ -83,6 +87,11 @@ const EthturinSidebar = () => {
 	)
 	const space = currentFloatingSpaces
 
+	const openInNewTab = (url) => {
+		let win = window.open(url, "_blank")
+		win.focus()
+	}
+
 	const poap = () => {
 		if (space.indexOf("claim poap token") > -1) {
 			window.alert(
@@ -100,13 +109,6 @@ const EthturinSidebar = () => {
 		<SitemapStyled>
 			<Collapsible trigger="Sitemap">
 				<Grid>
-					<Cell1 onClick={() => addFloatingSpace("stop-covid-19")}>
-						<img
-							className="title"
-							src={require("../img/ethturin-elements/1-stop-covid-19.png")}
-							alt=""
-						/>
-					</Cell1>
 					<Cell2 onClick={() => addFloatingSpace("conference-room")}>
 						<img
 							className="title"
@@ -149,6 +151,18 @@ const EthturinSidebar = () => {
 							alt=""
 						/>
 					</Cell7>
+					<Cell1
+						onClick={() =>
+							openInNewTab(
+								"https://www.cryptovoxels.com/play?coords=NW@72W,76S"
+							)
+						}>
+						<img
+							className="title"
+							src={require("../img/ethturin-elements/1-stop-covid-19.png")}
+							alt=""
+						/>
+					</Cell1>
 					<Cell8 onClick={() => poap()}>
 						<img
 							className="title"
@@ -163,13 +177,6 @@ const EthturinSidebar = () => {
 							alt=""
 						/>
 					</Cell9>
-					<Cell10 onClick={() => addFloatingSpace("Gitcoin")}>
-						<img
-							className="title"
-							src={require("../img/ethturin-elements/10-gitcoin.png")}
-							alt=""
-						/>
-					</Cell10>
 				</Grid>
 			</Collapsible>
 		</SitemapStyled>

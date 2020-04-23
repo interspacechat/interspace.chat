@@ -144,11 +144,9 @@ const Cell7 = styled.div`
 
 const Cell8 = styled.div`
 	display: grid;
-	.title {
-		transform: scale(2) translate(-40px, 50px);
-	}
+	place-content: center;
 	.portal {
-		align-self: end;
+		place-self: center;
 	}
 	&:hover .title {
 		opacity: 1;
@@ -157,19 +155,18 @@ const Cell8 = styled.div`
 
 const Cell9 = styled.div`
 	display: grid;
+	place-content: center;
+	.portal {
+		justify-self: center;
+	}
 	&:hover .title {
 		opacity: 1;
-	}
-	.title {
-		transform: scale(2.2) translate(-10px, 0px);
 	}
 `
 
 const Cell10 = styled.div`
-	display: grid;
-	.title {
-		transform: scale(2) translate(40px, 50px);
-	}
+	display: flex;
+	justify-self: center;
 	&:hover .title {
 		opacity: 1;
 	}
@@ -177,9 +174,7 @@ const Cell10 = styled.div`
 
 const BottomLinks = styled.span`
 	display: grid;
-	grid-template-columns: repeat(3, 91px);
-	justify-items: space-between;
-	align-items: center;
+	grid-template-columns: 1fr 1fr;
 `
 
 const Ethturin = () => {
@@ -187,6 +182,11 @@ const Ethturin = () => {
 		FloatingSpaceContext
 	)
 	const space = currentFloatingSpaces
+
+	const openInNewTab = (url) => {
+		let win = window.open(url, "_blank")
+		win.focus()
+	}
 
 	const poap = () => {
 		if (space.indexOf("claim poap token") > -1) {
@@ -204,7 +204,10 @@ const Ethturin = () => {
 	return (
 		<ImagemapContainer>
 			<Grid>
-				<Cell1 onClick={() => addFloatingSpace("stop-covid-19")}>
+				<Cell1
+					onClick={() =>
+						openInNewTab("https://www.cryptovoxels.com/play?coords=NW@72W,76S")
+					}>
 					<img
 						className="title"
 						src={require("../img/ethturin-elements/1-stop-covid-19.png")}
@@ -313,18 +316,6 @@ const Ethturin = () => {
 							alt="discord chat"
 						/>
 					</Cell9>
-					<Cell10 onClick={() => addFloatingSpace("Gitcoin")}>
-						<img
-							className="title"
-							src={require("../img/ethturin-elements/10-gitcoin.png")}
-							alt=""
-						/>
-						<img
-							className="portal"
-							src={require("../img/ethturin-elements/gitcoin.png")}
-							alt="Gitcoin Hackathon"
-						/>
-					</Cell10>
 				</BottomLinks>
 			</Grid>
 		</ImagemapContainer>

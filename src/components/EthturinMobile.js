@@ -12,9 +12,10 @@ const Grid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	grid-template-rows: repeat(4, auto);
-	grid-gap: 0.5rem;
+
+	width: 80vw;
 	img {
-		max-width: 50px;
+		max-width: 80px;
 		height: auto;
 		justify-self: center;
 	}
@@ -90,7 +91,7 @@ const BottomLinks = styled.span`
 	grid-column: 1 / span 3;
 	justify-self: center;
 	display: grid;
-	grid-template-columns: repeat(3, 91px);
+	grid-template-columns: repeat(2, 91px);
 	justify-items: space-between;
 	align-items: center;
 	padding-top: 2rem;
@@ -124,21 +125,6 @@ const EthturinMobile = () => {
 	return (
 		<ImagemapContainer>
 			<Grid>
-				<Cell1
-					onClick={() =>
-						openInNewTab("https://portal.interspace.chat/stop-covid-19")
-					}>
-					<img
-						className="title"
-						src={require("../img/ethturin-elements/1-stop-covid-19.png")}
-						alt=""
-					/>
-					<img
-						className="portal"
-						src={require("../img/ethturin-elements/stop-covid-19.png")}
-						alt="stop-covid-19-videochat"
-					/>
-				</Cell1>
 				<Cell2
 					onClick={() =>
 						openInNewTab("https://portal.interspace.chat/conference-room")
@@ -218,6 +204,21 @@ const EthturinMobile = () => {
 						alt="create your own videochat room"
 					/>
 				</Cell7>
+				<Cell1
+					onClick={() =>
+						openInNewTab("https://www.cryptovoxels.com/play?coords=NW@72W,76S")
+					}>
+					<img
+						className="title"
+						src={require("../img/ethturin-elements/1-stop-covid-19.png")}
+						alt=""
+					/>
+					<img
+						className="portal"
+						src={require("../img/ethturin-elements/stop-covid-19.png")}
+						alt="stop-covid-19-videochat"
+					/>
+				</Cell1>
 				<BottomLinks>
 					<Cell8 onClick={() => poap()}>
 						<img
@@ -243,21 +244,6 @@ const EthturinMobile = () => {
 							alt="discord chat"
 						/>
 					</Cell9>
-					<Cell10
-						onClick={() =>
-							openInNewTab("https://consensyshealth.com/covid-19/")
-						}>
-						<img
-							className="title"
-							src={require("../img/ethturin-elements/10-gitcoin.png")}
-							alt=""
-						/>
-						<img
-							className="portal"
-							src={require("../img/ethturin-elements/gitcoin.png")}
-							alt="Gitcoin Hackathon"
-						/>
-					</Cell10>
 				</BottomLinks>
 			</Grid>
 		</ImagemapContainer>
