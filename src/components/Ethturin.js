@@ -210,7 +210,7 @@ const Ethturin = () => {
 					}>
 					<img
 						className="title"
-						src={require("../img/ethturin-elements/1-stop-covid-19.png")}
+						src={require("../img/ethturin-elements/1-cryptaly.png")}
 						alt=""
 					/>
 					<img
