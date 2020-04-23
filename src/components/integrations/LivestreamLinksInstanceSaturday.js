@@ -48,7 +48,7 @@ function LivestreamLinksInstance() {
 			</Descriptor>
 			<ParagraphStyled>
 				<LinkStyled
-					href="https://youtu.be/gpvx5Gi6Ktc"
+					href="https://youtu.be/YZ2OA69Xub8"
 					target="_blank"
 					rel="noopener noreferrer">
 					<img
@@ -60,7 +60,7 @@ function LivestreamLinksInstance() {
 					Conference Room
 				</LinkStyled>
 				<LinkStyled
-					href="https://youtu.be/2ko1g1yzWkg"
+					href="https://youtu.be/TvbSt38x8Bc"
 					target="_blank"
 					rel="noopener noreferrer">
 					<img

@@ -57,11 +57,7 @@ const Grid = styled.div`
 	}
 `
 
-const Cell1 = styled.div`
-	img {
-		height: 36px;
-	}
-`
+const Cell1 = styled.div``
 
 const Cell2 = styled.div``
 
