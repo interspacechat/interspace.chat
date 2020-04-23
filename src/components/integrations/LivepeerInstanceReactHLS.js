@@ -3,9 +3,7 @@ import ReactHLS from "react-hls";
 import styled from "@emotion/styled";
 
 const LivepeerContainer = styled.div`
-  display: inherit;
-  max-width: 95%;
-  max-height: auto;
+  display: block;
   margin: 0 auto;
 `;
 
@@ -17,6 +15,7 @@ function LivepeerInstance() {
         height="100%"
         url="https://video.interspace.chat/stream/ethturin.m3u8"
         allowfullscreen
+        frameBorder="0"
       />
     </LivepeerContainer>
   );
