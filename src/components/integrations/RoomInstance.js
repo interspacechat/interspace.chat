@@ -96,11 +96,9 @@ const RoomInstance = ({ space }) => {
 			<RoomServiceComponent roomData={roomData} />
 			<ButtonContainer>
 				{currentFloatingSpaces.indexOf("youtube") === -1 ? (
-					<LivestreamButton onClick={() => addFloatingSpace("youtube")}>
-						Watch{" "}
-						<StrongStyled className="styled">
-							Livestream on YouTube
-						</StrongStyled>
+					<LivestreamButton onClick={() => addFloatingSpace("livestream")}>
+						Show <StrongStyled className="styled">Livestream</StrongStyled>{" "}
+						links
 					</LivestreamButton>
 				) : null}
 

@@ -163,7 +163,11 @@ function FloatingRoomWindow() {
 			windowOriginX = width / 2
 		} else if (windowKey === "calendar") {
 			windowOriginX = width
-		} else if (windowKey === "youtube" || windowKey === "livepeer") {
+		} else if (
+			windowKey === "youtube" ||
+			windowKey === "livepeer" ||
+			windowKey === "livestream"
+		) {
 			windowOriginX = 20
 		} else if (
 			windowKey === "VHackathon ETH Turin" ||
@@ -192,7 +196,11 @@ function FloatingRoomWindow() {
 			windowOriginY = 40
 		} else if (windowKey === "calendar") {
 			windowOriginY = height + 10
-		} else if (windowKey === "youtube" || windowKey === "livepeer") {
+		} else if (
+			windowKey === "youtube" ||
+			windowKey === "livepeer" ||
+			windowKey === "livestream"
+		) {
 			windowOriginY = height + 10
 		} else if (
 			windowKey === "help" ||
@@ -233,17 +241,23 @@ function FloatingRoomWindow() {
 		) {
 			bgColor = "#78ffbedd"
 		} else if (
-			(windowKey === "youtube" || windowKey === "livepeer") &&
+			(windowKey === "youtube" ||
+				windowKey === "livepeer" ||
+				windowKey === "livepeer") &&
 			space.indexOf("stop-covid-19") > -1
 		) {
 			bgColor = "#ff8383dd"
 		} else if (
-			(windowKey === "youtube" || windowKey === "livepeer") &&
+			(windowKey === "youtube" ||
+				windowKey === "livepeer" ||
+				windowKey === "livepeer") &&
 			space.indexOf("conference-room") > -1
 		) {
 			bgColor = "#cfa6ffdd"
 		} else if (
-			(windowKey === "youtube" || windowKey === "livepeer") &&
+			(windowKey === "youtube" ||
+				windowKey === "livepeer" ||
+				windowKey === "livestream") &&
 			space.indexOf("mentor-ring") > -1
 		) {
 			bgColor = "#78ffbedd"
@@ -251,8 +265,6 @@ function FloatingRoomWindow() {
 			bgColor = "#ffa9a9dd"
 		} else if (windowKey === "new room") {
 			bgColor = "#8200ffdd"
-		} else if (windowKey === "livestream") {
-			bgColor = "#ffff6edd"
 		} else if (windowKey === "claim poap token") {
 			bgColor = "#ff00e1dd"
 		} else if (windowKey === "Gitcoin") {

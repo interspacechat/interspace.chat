@@ -3,7 +3,7 @@ import React from "react"
 function RestreamerInstance() {
 	return (
 		<iframe
-			src="http://161.35.72.191:8081/player.html"
+			src="https://ingest.interspace.chat:8081/player.html"
 			name="restreamer-player"
 			width="800"
 			height="450"
