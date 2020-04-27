@@ -34,6 +34,13 @@ Clicking on "livestream" or "text chat" button in the portal popup will open col
 
 One cannot however use multiple portals simultaneously, nor can one use the livestream from one portal, and a videoconference from a second portal in the interspace at the same time. 
 
+## **Livestreams**
+Livestreams for each portal can be viewed either in the resizable popup directly in interspace, or in an external tab. "View livestream" buttons in portal popups will open a livestream popup in the interspace. The "livestream" UI popup and the livestream link in the sidebar sitemap provide external links which will open in a new tab.
+
+## POAP Tokens
+
+When POAP Tokens are available to claim for an event, please follow the instructions of the POAP portal to get them!
+
 ### **On deployments with Discord embed**
 The textchat window will always open to the channel for the open portal, but one can use the menu in the textchat popup to navigate to channels for other portals.
 
@@ -59,13 +66,6 @@ Users always blame the videoconference client for poor experience, when it is us
 If you are experiencing quality issues, click on the "three vertical dots" icon in the lower right hand corner of the jitsi toolbar, and reduce the video / audio quality settings.
 
 Whether you are a speaker or a participant, we suggest shutting down all programs running in the background, and to have only the interspace tab open in your browser while participating in an event. You'll be surprised at the improvement in the quality of your experience when everything else is not consuming your processor speed, bandwidth, and browser cache. 
-
-## **Livestreams**
-Livestreams for each portal can be viewed either in the resizable popup directly in interspace, or in an external tab. "View livestream" buttons in portal popups will open a livestream popup in the interspace. The "livestream" UI popup and the livestream link in the sidebar sitemap provide external links which will open in a new tab.
-
-## POAP Tokens
-
-When POAP Tokens are available to claim for an event, please follow the instructions of the POAP portal to get them!
 
 ## Help for Jitsi Videochat
 All interface elements are conveniently located and set to stay visible.
