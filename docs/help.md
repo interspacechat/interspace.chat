@@ -70,14 +70,21 @@ Whether you are a speaker or a participant, we suggest shutting down all program
 ## Help for Jitsi Videochat
 All interface elements are conveniently located and set to stay visible.
 (From left to right)
-1 - share screen 
-2 - raise hand
-3 - mute/unmute AUDIO (little arrow = device selection input & output)
-6 - Hang up
-5 - mute/unmute VIDEO (little arrow = device selection input & output)
-6 - Toggle tile and speaker view
-7 - Room info anddirect link
-8 - More actions
+1. share screen 
+2. raise hand
+3. mute/unmute AUDIO (little arrow = device selection input & output)
+4. Hang up
+5. mute/unmute VIDEO (little arrow = device selection input & output)
+6. Toggle tile and speaker view
+7. Room info anddirect link
+8. More actions
+  * change username
+  * manage video quality
+  * toggle full screen
+  * enter legacy settings menu
+  * mute all (moderator only)
+  * toggle full screen
+  * various
 
 ![Jitsi Ui](jitsi-ui.png?raw=true)
 ### Fullscreen in videochat
