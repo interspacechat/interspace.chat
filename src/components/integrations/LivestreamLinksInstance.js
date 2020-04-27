@@ -48,7 +48,7 @@ function LivestreamLinksInstance() {
 			</Descriptor>
 			<ParagraphStyled>
 				<LinkStyled
-					href="https://youtu.be/YZ2OA69Xub8"
+					href="https://youtu.be/3oeI5GYC43A"
 					target="_blank"
 					rel="noopener noreferrer">
 					<img
@@ -57,19 +57,7 @@ function LivestreamLinksInstance() {
 						height="18px"
 						alt=""
 					/>
-					Conference Room
-				</LinkStyled>
-				<LinkStyled
-					href="https://youtu.be/TvbSt38x8Bc"
-					target="_blank"
-					rel="noopener noreferrer">
-					<img
-						src={require("../../img/ethturin-elements/mentor-ring.png")}
-						width="auto"
-						height="18px"
-						alt=""
-					/>
-					Mentor Ring
+					V-Hackathon Closing Ceremony
 				</LinkStyled>
 			</ParagraphStyled>
 		</Container>

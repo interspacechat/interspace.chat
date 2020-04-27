@@ -183,6 +183,10 @@ const Ethturin = () => {
 	)
 	const space = currentFloatingSpaces
 
+	const featureNotHereYet = () => {
+		alert("This feature is currently not available")
+	}
+
 	const openInNewTab = (url) => {
 		let win = window.open(url, "_blank")
 		win.focus()
@@ -231,7 +235,7 @@ const Ethturin = () => {
 						alt="conference-room-videochat"
 					/>
 				</Cell2>
-				<Cell3 onClick={() => addFloatingSpace("mentor-ring")}>
+				<Cell3 onClick={() => featureNotHereYet()}>
 					<img
 						className="title"
 						src={require("../img/ethturin-elements/3-mentor-ring.png")}
