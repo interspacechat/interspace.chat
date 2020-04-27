@@ -69,4 +69,19 @@ When POAP Tokens are available to claim for an event, please follow the instruct
 
 ## Help for Jitsi Videochat
 All interface elements are conveniently located and set to stay visible.
+(From left to right)
+1 - share screen 
+2 - raise hand
+3 - mute/unmute AUDIO (little arrow = device selection input & output)
+6 - Hang up
+5 - mute/unmute VIDEO (little arrow = device selection input & output)
+6 - Toggle tile and speaker view
+7 - Room info anddirect link
+8 - More actions
+
 ![Jitsi Ui](jitsi-ui.png?raw=true)
+### Fullscreen in videochat
+Click on `More Actions` in bottom right and then `Show Fullscreen`
+
+### Choose/Edit Username
+Click on your little window upper right corner, or `More Actions` in bottom right and then on the first line which is your current username or dive into`Settings`
