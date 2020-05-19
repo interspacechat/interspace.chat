@@ -4,7 +4,7 @@ import { BrowserView, MobileView } from "react-device-detect";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
-import SvgImagemap from "./SoliditySummit";
+import SvgImagemap from "./Imagemap";
 import SvgImagemapMobile from "./SoliditySummitMobile";
 
 import triangle from "../img/triangle.svg";
