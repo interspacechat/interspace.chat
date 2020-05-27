@@ -258,9 +258,9 @@ const Space = () => {
             <div
               id="c12"
               className="circle row-4 c-center click-zone"
-              onClick={() => addFloatingSpace("calendar")}
+              onClick={() => addFloatingSpace("youtube")}
             >
-              <span className="roomName">Event calendar</span>
+              <span className="roomName">SpaceX launch</span>
             </div>
           </div>
           {/*

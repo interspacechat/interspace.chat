@@ -1,12 +1,12 @@
 import React from "react";
 
-function YoutubeInstance({width, height, roomData}) {
+function YoutubeInstance({ width, height }) {
   return (
     <iframe
-      title="Youtube conference room"
-      width={width}
-      height={height}
-      src={`https://www.youtube.com/embed/${roomData.videoId}`}
+      title="youtube"
+      width={"100%"}
+      height={"100%"}
+      src={`https://www.youtube.com/embed/21X5lGlDOfg`}
       frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
