@@ -7,7 +7,6 @@ import LoftRadioInstance from "./integrations/LoftRadioInstance";
 import ChatInstance from "./integrations/ChatInstance";
 import CalendarInstance from "./integrations/CalendarInstance";
 import RoomInstance from "./RoomInstance";
-import YoutubeInstance from "./integrations/YoutubeInstance";
 import { RoomNames } from "../utils/constants";
 
 const width = window.innerWidth / 2;
@@ -45,8 +44,8 @@ const spaceContainerStyle = {
   boxShadow:
     "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
   "&:active iframe": {
-    pointerEvents: "none",
-  },
+    pointerEvents: "none"
+  }
 };
 
 const Closer = styled.div`
@@ -73,17 +72,15 @@ function getFloatingRoomWindow(windowKey) {
     return <ChatInstance />;
   } else if (windowKey === "calendar") {
     return <CalendarInstance />;
-  } else if (windowKey === "discord chat") {
-    return <ChatInstance />;
-  } else if (windowKey === "youtube") {
-    return <YoutubeInstance />;
+  } else if (windowKey === null) {
+    return null;
   }
 }
 
 function zIndexesReducer(state, action) {
   return {
     ...state,
-    [action.key]: action.value,
+    [action.key]: action.value
   };
 }
 
@@ -100,7 +97,7 @@ function FloatingRoomWindow() {
 
   useEffect(() => {
     let tempMax = maxZ;
-    currentFloatingSpaces.forEach((space) => {
+    currentFloatingSpaces.forEach(space => {
       if (!zIndexes[space]) {
         setZIndexes({ key: space, value: ++tempMax });
       }
@@ -111,7 +108,7 @@ function FloatingRoomWindow() {
     setZIndexes({ key: windowKey, value: maxZ + 1 });
   }
 
-  const setStartingCoordinatesX = (windowKey) => {
+  const setStartingCoordinatesX = windowKey => {
     let windowOriginX = 20;
     if (windowKey === "discord chat") {
       windowOriginX = width;
@@ -120,7 +117,7 @@ function FloatingRoomWindow() {
     }
     return windowOriginX;
   };
-  const setStartingCoordinatesY = (windowKey) => {
+  const setStartingCoordinatesY = windowKey => {
     let windowOriginY = 40;
     if (windowKey === "discord chat") {
       windowOriginY = 40;
@@ -130,18 +127,18 @@ function FloatingRoomWindow() {
     return windowOriginY;
   };
 
-  return currentFloatingSpaces.map((windowKey) => (
+  return currentFloatingSpaces.map(windowKey => (
     <Rnd
       key={windowKey}
       default={{
         x: setStartingCoordinatesX(windowKey),
         y: setStartingCoordinatesY(windowKey),
         width: width - 20,
-        height,
+        height
       }}
       style={{
         ...spaceContainerStyle,
-        zIndex: zIndexes[windowKey] || 1,
+        zIndex: zIndexes[windowKey] || 1
       }}
       onDragStart={() => setWindowFocus(windowKey)}
     >

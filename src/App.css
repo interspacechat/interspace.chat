@@ -207,6 +207,7 @@ body {
 }
 
 #c10:hover {
+  
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -217,7 +218,7 @@ body {
 }
 
 #c12:hover {
-  background: url(./img/nasa_logo.png);
+  background: url(./img/c6.jpg);
   background-size: cover;
 }
 
