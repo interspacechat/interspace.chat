@@ -1,7 +1,7 @@
 const colors = {
-  background: "whitesmoke",
-  textcolor: "black",
-  highlight: "#ff0000"
-};
+  background: 'black',
+  textcolor: 'whitesmoke',
+  highlight: '#D500A0'
+}
 
-export default colors;
+export default colors

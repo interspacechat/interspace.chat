@@ -21,9 +21,8 @@ function YoutubeInstance({ roomData }) {
       height='100%'
       src={`https://www.youtube-nocookie.com/embed/${youtubeRoom}`}
       frameBorder='0'
-      allow='accelerometer; autoplay="true"; encrypted-media; gyroscope; picture-in-picture'
+      allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
       allowFullScreen
-      style={{ borderRadius: '20px' }}
     />
   )
 }
