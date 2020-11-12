@@ -26,7 +26,7 @@
     "svg-to-jsx": "svgr svgr/imagemap.svg --out-dir src/components/ --svgo-config svgr/svgo.json",
     "svg-to-jsx-replace-with-props": "svgr < svgr/imagemap.svg > src/components/Imagemap.js --svgo-config svgr/svgo.json --replace-attr-values 'XXXXXXX={props.xxxxxx}'",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
