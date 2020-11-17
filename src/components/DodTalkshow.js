@@ -46,6 +46,12 @@ const PoweredBy = styled.img`
   bottom: 5%;
   left: 40vw;
   justify-self: center;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 const LinkContainer = styled.div`
@@ -56,13 +62,6 @@ const LinkContainer = styled.div`
   right: 5%;
   bottom: 30%;
   grid-gap: 1rem;
-  & .clickme {
-    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    cursor: pointer;
-  }
-  &:hover .clickme {
-    transform: scale(1.1);
-  }
 `
 
 const ImageButton = styled.img`
@@ -127,7 +126,11 @@ function SvgImagemap (props) {
           onClick={() => addFloatingSpace('credits')}
         />
       </LinkContainer>
-      <PoweredBy src={producedby} alt='' />
+      <PoweredBy
+        src={producedby}
+        alt=''
+        onClick={() => openInNewTab('https://decentralala.com')}
+      />
     </Container>
   )
 }

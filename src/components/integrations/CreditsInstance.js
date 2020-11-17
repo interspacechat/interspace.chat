@@ -67,15 +67,27 @@ function CreditsInstance () {
     <Container>
       <ListWrapper>
         <StyledList>
-          <h3>Credits:</h3>
-          <StyledListItem>
-            Image by{' '}
+          <h3>Production by:</h3>
+          <StyledListLink>
             <LinkStyled
-              href='https://twitter.com/_franzihei'
+              href='https://decentralala.com/'
               target='_blank'
               rel='noopener noreferrer'
             >
-              @franzihei
+              Department of Decentralization
+            </LinkStyled>
+          </StyledListLink>{' '}
+        </StyledList>
+        <StyledList>
+          <h3>Website Credits:</h3>
+          <StyledListItem>
+            Image by{' '}
+            <LinkStyled
+              href='https://twitter.com/littlenicething'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Little Nice Things Studio
             </LinkStyled>{' '}
           </StyledListItem>
           <StyledListItem>
@@ -140,13 +152,13 @@ function CreditsInstance () {
             </LinkStyled>
           </StyledListItem>
           <StyledListItem>
-            Donate to our interspace.chat{' '}
+            Donate to interspace.chat{' '}
             <LinkStyled
               href='https://gitcoin.co/grants/516/interspacechat'
               target='_blank'
               rel='noopener noreferrer'
             >
-              Gitcoin Grant
+              using Gitcoin
             </LinkStyled>{' '}
           </StyledListItem>
           <StyledListItem>
@@ -159,10 +171,10 @@ function CreditsInstance () {
               support.interspacechat.eth
             </LinkStyled>{' '}
           </StyledListItem>
-          <StyledListItem>
+          {/**<StyledListItem>
             Spread the word
             <ShareButton />
-          </StyledListItem>
+          </StyledListItem>*/}
         </StyledList>
       </ListWrapper>
     </Container>

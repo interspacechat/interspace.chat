@@ -167,7 +167,7 @@ function FloatingRoomWindow () {
 
   const setStartingCoordinatesX = windowKey => {
     let windowOriginX = 20
-    if (windowKey === 'discord chat') {
+    if (windowKey === 'teletext chat') {
       windowOriginX = width
     } else if (windowKey === 'claim poap token') {
       windowOriginX = width / 2
