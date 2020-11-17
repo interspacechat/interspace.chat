@@ -152,6 +152,16 @@ const Element = () => (
   </Descripton>
 )
 
+const MobileElement = () => (
+  <Descripton>
+    <p>
+      This website is optimized for <StrongStyled>Desktop</StrongStyled>.{' '}
+    </p>
+    <p>Watch "DoD talkshow 2.5":</p>
+    <a href='https://youtu.be/z3qAitImQDs'>DoD's Youtube Channel</a>
+  </Descripton>
+)
+
 const Space = () => {
   const { currentFloatingSpaces } = useContext(FloatingSpaceContext)
 
@@ -178,10 +188,7 @@ const Space = () => {
         </ImagemapContainer>
       </BrowserView>
       <MobileView>
-        <ShowSection />
-        <ImagemapContainerMobile>
-          <SvgImagemapMobile />
-        </ImagemapContainerMobile>
+        <MobileElement />
       </MobileView>
     </SpaceSelector>
   )

@@ -7,8 +7,7 @@ import { FloatingSpaceContext } from '../contexts/FloatingSpaceContext'
 import useWindowDimensions from '../utils/useWindowDimensions'
 
 import tvImage from '../img/dod-tv.png'
-import statueImage from '../img/dod-tv1.png'
-import dodTv from '../img/dod-tv-transparent-frame.png'
+import dodTv from '../img/dod-tv-transparent-frame1.png'
 
 import guide from '../img/dod-links/guide.png'
 import chat from '../img/dod-links/chat.png'
@@ -25,7 +24,7 @@ const Container = styled.div`
   background-color: black;
 `
 
-const TV = styled.div`
+const Tv = styled.div`
   align-self: center;
   justify-self: center;
   z-index: 1;
@@ -57,6 +56,22 @@ const LinkContainer = styled.div`
   right: 5%;
   bottom: 30%;
   grid-gap: 1rem;
+  & .clickme {
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    cursor: pointer;
+  }
+  &:hover .clickme {
+    transform: scale(1.1);
+  }
+`
+
+const ImageButton = styled.img`
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 function SvgImagemap (props) {
@@ -86,13 +101,31 @@ function SvgImagemap (props) {
   return (
     <Container>
       <Statue src={dodTv} width='100%' height='100%' alt='' />
-      <TV style={{ width: width / 2, height: height / 2.1 }}>
+      <Tv style={{ width: width / 2, height: height / 2.1 }}>
         <YoutubeInstance />
-      </TV>
+      </Tv>
       <LinkContainer>
-        <img src={chat} alt='about' height='30px' width='auto' />
-        <img src={guide} alt='about' height='30px' width='auto' />
-        <img src={about} alt='about' height='30px' width='auto' />
+        <ImageButton
+          src={chat}
+          alt='chat'
+          height='30px'
+          width='auto'
+          onClick={() => addFloatingSpace('teletext chat')}
+        />
+        <ImageButton
+          src={guide}
+          alt='event guide'
+          height='30px'
+          width='auto'
+          onClick={() => addFloatingSpace('tv guide')}
+        />
+        <ImageButton
+          src={about}
+          alt='about'
+          height='30px'
+          width='auto'
+          onClick={() => addFloatingSpace('credits')}
+        />
       </LinkContainer>
       <PoweredBy src={producedby} alt='' />
     </Container>
