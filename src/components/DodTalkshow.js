@@ -59,7 +59,7 @@ const LinkContainer = styled.div`
   grid-template-rows: repeat(3, auto);
   position: absolute;
   z-index: 2;
-  right: 5%;
+  right: 2rem;
   bottom: 30%;
   grid-gap: 1rem;
 `
