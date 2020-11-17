@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from '@emotion/styled'
 import { BrowserView, MobileView } from 'react-device-detect'
 
@@ -6,8 +6,6 @@ import { FloatingSpaceContext } from '../contexts/FloatingSpaceContext'
 
 import SvgImagemap from './DodTalkshow'
 import SvgImagemapMobile from './SoliditySummitMobile'
-
-import triangle from '../img/triangle.svg'
 
 const Header = styled.span``
 
@@ -32,8 +30,8 @@ const Headline = styled.h6`
 
   a {
     font-weight: 300;
-    color: ${(props) => props.theme.body};
-    background-color: ${(props) => props.theme.background};
+    color: ${props => props.theme.body};
+    background-color: ${props => props.theme.background};
     text-decoration: underline;
   }
 
@@ -57,7 +55,7 @@ const SpaceInfo = styled.div`
   font-size: 1rem;
   font-weight: 300;
   div {
-    color: ${(props) => props.theme.body};
+    color: ${props => props.theme.body};
   }
 `
 
@@ -87,7 +85,7 @@ const Descripton = styled.div`
 `
 
 const CurrentSpace = styled.span`
-  color: ${(props) => props.theme.highlight};
+  color: ${props => props.theme.highlight};
 `
 
 const StrongStyled = styled.strong`
@@ -106,7 +104,7 @@ const ShowSection = () => {
 
   const ButtonContainer = styled.div`
     position: absolute;
-    background-color: ${(props) => props.theme.background};
+    background-color: ${props => props.theme.background};
     opacity: 0.95;
     width: 100%;
     height: 100%;
@@ -116,9 +114,9 @@ const ShowSection = () => {
   `
   const CloseButton = styled.button`
     background: unset;
-    border: 1px solid ${(props) => props.theme.highlight};
+    border: 1px solid ${props => props.theme.highlight};
     border-radius: 100px;
-    color: ${(props) => props.theme.highlight};
+    color: ${props => props.theme.highlight};
     font-size: 2rem;
     font-weight: 100;
     padding: 1rem;
@@ -170,18 +168,6 @@ const Space = () => {
     } else {
       displayedJoinedSpaces = space.join(' & ')
     }
-  }
-  {
-    /**
-  useEffect(() => {
-    var Sidecar = require("gitter-sidecar");
-
-    var myChat = new Sidecar({
-      room: "ethereum/solidity",
-      activationElement: false,
-    });
-  });
-   */
   }
 
   return (

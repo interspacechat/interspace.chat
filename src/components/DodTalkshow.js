@@ -10,6 +10,11 @@ import tvImage from '../img/dod-tv.png'
 import statueImage from '../img/dod-tv1.png'
 import dodTv from '../img/dod-tv-transparent-frame.png'
 
+import guide from '../img/dod-links/guide.png'
+import chat from '../img/dod-links/chat.png'
+import about from '../img/dod-links/about.png'
+import producedby from '../img/dod-links/producedby.png'
+
 const Container = styled.div`
   display: grid;
  /** background-image: url(${tvImage}); */
@@ -35,14 +40,33 @@ const Statue = styled.img`
   pointer-events: none;
 `
 
-function SvgImagemap(props) {
+const PoweredBy = styled.img`
+  position: absolute;
+  z-index: 2;
+  width: 20vw;
+  bottom: 5%;
+  left: 40vw;
+  justify-self: center;
+`
+
+const LinkContainer = styled.div`
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  bottom: 30%;
+  grid-gap: 1rem;
+`
+
+function SvgImagemap (props) {
   const { addFloatingSpace, currentFloatingSpaces } = useContext(
     FloatingSpaceContext
   )
   const space = currentFloatingSpaces
   const { height, width } = useWindowDimensions()
 
-  const openInNewTab = (url) => {
+  const openInNewTab = url => {
     let win = window.open(url, '_blank')
     win.focus()
   }
@@ -61,10 +85,16 @@ function SvgImagemap(props) {
 
   return (
     <Container>
-      <Statue src={dodTv} width='100%' height='100%' />
+      <Statue src={dodTv} width='100%' height='100%' alt='' />
       <TV style={{ width: width / 2, height: height / 2.1 }}>
         <YoutubeInstance />
       </TV>
+      <LinkContainer>
+        <img src={chat} alt='about' height='30px' width='auto' />
+        <img src={guide} alt='about' height='30px' width='auto' />
+        <img src={about} alt='about' height='30px' width='auto' />
+      </LinkContainer>
+      <PoweredBy src={producedby} alt='' />
     </Container>
   )
 }
