@@ -274,6 +274,8 @@ function FloatingRoomWindow () {
     let windowWidth = width - 20
     if (windowKey === 'credits' || windowKey === 'VHackathon Solidity Summit') {
       windowWidth = width / 2
+    } else if (windowKey === 'tv guide') {
+      windowWidth = width + 40
     } else {
       windowWidth = width - 20
     }

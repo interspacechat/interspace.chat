@@ -4,7 +4,7 @@ function TvguideInstance () {
   return (
     <iframe
       title='TV Guide'
-      src='http://4.bp.blogspot.com/_szY6czURhx0/TKdhIwEZf0I/AAAAAAAACtE/s1C8DADg8cQ/s1600/TVGuideInterior4.jpg'
+      src='https://docs.google.com/spreadsheets/d/e/2PACX-1vRN42PRxNp8sUePJyhyzDKrLgpcY5aleN-UxXvlSqtOSKpVnamTBHLuj_Gu48PI8SFCGfdJKKm0ahlo/pubhtml?gid=287907451&single=true'
       style={{
         height: `100%`,
         width: `100%`,
