@@ -6,9 +6,9 @@ A simple selector for predefined, self-hosted JitSi rooms. The idea is to give t
 - injects JitSi API
 
 Used here:
-https://interspace.chat
-https://noncon.interspace.chat
-https://ethturin.interspace.chat/
-https://solidity-summit.netlify.app/
-https://watch.twopointfive.online/
-https://metafest.metagame.wtf
+- https://interspace.chat
+- https://noncon.interspace.chat
+- https://ethturin.interspace.chat/
+- https://solidity-summit.netlify.app/
+- https://watch.twopointfive.online/
+- https://metafest.metagame.wtf
