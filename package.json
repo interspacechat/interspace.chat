@@ -3,23 +3,24 @@
   "version": "0.3.0",
   "private": true,
   "dependencies": {
-    "@emotion/core": "^10.0.28",
+    "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
-    "formik": "^2.1.4",
+    "formik": "^2.2.6",
     "gitter-sidecar": "^1.5.0",
     "lib-jitsi-meet": "^1.0.6",
-    "react": "^16.13.1",
-    "react-collapsible": "^2.7.0",
-    "react-device-detect": "^1.11.14",
-    "react-dom": "^16.13.1",
-    "react-draggable": "^4.2.0",
+    "react": "^16.14.0",
+    "react-collapsible": "^2.8.3",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^16.14.0",
+    "react-draggable": "^4.4.3",
     "react-hls": "0.0.8",
-    "react-hook-form": "^5.2.0",
-    "react-rnd": "^10.1.7",
-    "react-scripts": "^3.4.1",
-    "styled-components": "^5.0.0-beta.9",
+    "react-hook-form": "^5.7.2",
+    "react-responsive": "^8.2.0",
+    "react-rnd": "^10.2.4",
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.2.3",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -46,6 +47,6 @@
     ]
   },
   "devDependencies": {
-    "@svgr/cli": "^5.3.1"
+    "@svgr/cli": "^5.5.0"
   }
 }
