@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useMediaQuery } from 'react-responsive'
 import { FloatingSpaceContext } from '../contexts/FloatingSpaceContext'
 
-import AnnouncementImage from '../img/sovrython/announcement.png'
+import AnnouncementImage from '../img/sovrython/announcement.jpg'
 
 const StyledLink = styled.a`
   color: #e340a8;
