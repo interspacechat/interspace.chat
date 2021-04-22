@@ -19,6 +19,7 @@
     "react-hook-form": "^5.7.2",
     "react-responsive": "^8.2.0",
     "react-rnd": "^10.2.4",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "styled-components": "^5.2.3",
     "webfontloader": "^1.6.28"
