@@ -20,6 +20,16 @@ const ImageButton = styled.img`
   }
 `
 
+const TextButton = styled.a`
+  cursor: pointer;
+  transform: scale(1);
+  transition: 1s;
+
+  & :hover {
+    transform: scale(2);
+  }
+`
+
 const Announce = () => {
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
   const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
@@ -87,6 +97,12 @@ const Announce = () => {
           </div>
         </React.Fragment>
       )}
+      <TextButton
+        onClick={() => addFloatingSpace('About')}
+        style={{ position: 'absolute', bottom: '50px', right: '50px' }}
+      >
+        About
+      </TextButton>
     </React.Fragment>
   )
 }

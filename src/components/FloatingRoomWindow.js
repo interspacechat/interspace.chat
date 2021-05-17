@@ -12,6 +12,7 @@ import ChatInstance from './integrations/ChatInstance'
 import CalendarInstance from './integrations/CalendarInstance'
 import CryptovoxelsInstance from './integrations/CryptovoxelsInstance'
 import LoftRadioInstance from './integrations/LoftRadioInstance'
+import AboutInstance from './external-sites/AboutInstance'
 
 const width = window.innerWidth / 2
 const height = window.innerHeight / 2
@@ -78,8 +79,8 @@ function getFloatingRoomWindow (windowKey) {
     return <RoomInstance space={windowKey} />
   } else if (windowKey === 'Calendar') {
     return <CalendarInstance />
-  } else if (windowKey === 'Metafest Booth') {
-    return <CryptovoxelsInstance />
+  } else if (windowKey === 'About') {
+    return <AboutInstance />
   } else if (windowKey === 'Chat') {
     return <ChatInstance />
   } else if (windowKey === 'Sign Up') {
@@ -139,7 +140,7 @@ function FloatingRoomWindow () {
       windowOriginX = width / 4
     } else if (
       windowKey === 'help' ||
-      windowKey === 'about' ||
+      windowKey === 'About' ||
       windowKey === 'new room' ||
       windowKey === 'loft.radio' ||
       windowKey === 'claim poap token'
@@ -155,6 +156,7 @@ function FloatingRoomWindow () {
     if (
       windowKey === 'VHackathon Solidity Summit' ||
       windowKey === 'credits' ||
+      windowKey === 'About' ||
       windowKey === 'discord chat'
     ) {
       windowOriginY = 40
@@ -164,7 +166,6 @@ function FloatingRoomWindow () {
       windowOriginY = height + 10
     } else if (
       windowKey === 'help' ||
-      windowKey === 'about' ||
       windowKey === 'new room' ||
       windowKey === 'livestream' ||
       windowKey === 'loft.radio' ||
@@ -202,7 +203,7 @@ function FloatingRoomWindow () {
 
   const setStartingHeight = windowKey => {
     let windowHeight = height - 20
-    if (windowKey === 'Sign Up' || windowKey === 'VHackathon Solidity Summit') {
+    if (windowKey === 'Sign Up' || windowKey === 'About') {
       windowHeight = height * 1.8
     } else {
       windowHeight = height - 20
@@ -231,7 +232,7 @@ function FloatingRoomWindow () {
           <SpaceHeaderElement onClick={() => closeFloatingSpace(windowKey)}>
             <Closer />
           </SpaceHeaderElement>
-          <SpaceHeaderElement style={{ color: '#00000022' }}>
+          <SpaceHeaderElement style={{ color: '#000000' }}>
             {windowKey}
           </SpaceHeaderElement>
           <SpaceHeaderElement></SpaceHeaderElement>
