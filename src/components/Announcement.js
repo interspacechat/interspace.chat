@@ -2,6 +2,7 @@ import React, { Fragment, useContext, useState } from 'react'
 import styled from 'styled-components'
 import { useMediaQuery } from 'react-responsive'
 import { FloatingSpaceContext } from '../contexts/FloatingSpaceContext'
+import ButtonImage from '../img/sovrython/signup-button.png'
 
 import AnnouncementImage from '../img/sovrython/announcement.jpg'
 
@@ -9,7 +10,7 @@ const StyledLink = styled.a`
   color: #e340a8;
   text-align: center;
 `
-const ImageButton = styled.button`
+const ImageButton = styled.img`
   cursor: pointer;
   transform: scale(1);
   transition: 1s;
@@ -49,10 +50,23 @@ const Announce = () => {
             width: '100vw',
             height: '100vh',
             display: 'grid',
-            placeContent: 'center'
+            placeContent: 'space-around'
           }}
         >
           <img src={AnnouncementImage} alt='' width='100%' height='auto' />
+          <ImageButton
+            src={ButtonImage}
+            alt=''
+            width='100%'
+            height='auto'
+            onClick={() => addFloatingSpace('Sign Up')}
+            style={{
+              width: '200px',
+              height: 'auto',
+              margin: '0 auto',
+              cursor: 'pointer'
+            }}
+          />
         </div>
       ) : (
         <React.Fragment>
@@ -66,6 +80,22 @@ const Announce = () => {
             }}
           >
             <img src={AnnouncementImage} alt='' width='100%' height='auto' />
+            <ImageButton
+              src={ButtonImage}
+              alt=''
+              width='100%'
+              height='auto'
+              onClick={() => addFloatingSpace('Sign Up')}
+              style={{
+                width: '250px',
+                top: '70vh',
+                position: 'absolute',
+                height: 'auto',
+                margin: '0 auto',
+                left: '40vw',
+                cursor: 'pointer'
+              }}
+            />
           </div>
         </React.Fragment>
       )}
