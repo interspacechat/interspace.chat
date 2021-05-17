@@ -178,12 +178,12 @@ function FloatingRoomWindow () {
   }
 
   const setFloatingwindowColor = windowKey => {
-    let bgColor = '#000000DD'
+    let bgColor = '#dab544DD'
 
     if (windowKey === 'NFT' || windowKey === 'Workshops') {
       bgColor = '#000000DD'
     } else {
-      bgColor = '#FFFFFFDD'
+      bgColor = '#dab544DD'
     }
     return bgColor
   }

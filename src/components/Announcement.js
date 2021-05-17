@@ -53,20 +53,18 @@ const Announce = () => {
             placeContent: 'space-around'
           }}
         >
-          <img src={AnnouncementImage} alt='' width='100%' height='auto' />
-          <ImageButton
-            src={ButtonImage}
-            alt=''
-            width='100%'
-            height='auto'
-            onClick={() => addFloatingSpace('Sign Up')}
-            style={{
-              width: '200px',
-              height: 'auto',
-              margin: '0 auto',
-              cursor: 'pointer'
-            }}
-          />
+          <a
+            href='https://sovryn.typeform.com/to/T8Y5jqe0'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <ImageButton
+              src={AnnouncementImage}
+              alt=''
+              width='100%'
+              height='auto'
+            />
+          </a>
         </div>
       ) : (
         <React.Fragment>
@@ -79,22 +77,12 @@ const Announce = () => {
               placeItems: 'center'
             }}
           >
-            <img src={AnnouncementImage} alt='' width='100%' height='auto' />
             <ImageButton
-              src={ButtonImage}
+              src={AnnouncementImage}
               alt=''
               width='100%'
               height='auto'
               onClick={() => addFloatingSpace('Sign Up')}
-              style={{
-                width: '250px',
-                top: '70vh',
-                position: 'absolute',
-                height: 'auto',
-                margin: '0 auto',
-                left: '40vw',
-                cursor: 'pointer'
-              }}
             />
           </div>
         </React.Fragment>
