@@ -10,15 +10,7 @@ const StyledLink = styled.a`
   color: #e340a8;
   text-align: center;
 `
-const ImageButton = styled.img`
-  cursor: pointer;
-  transform: scale(1);
-  transition: 1s;
-
-  & :hover {
-    transform: scale(2);
-  }
-`
+const ImageButton = styled.img``
 
 const TextButton = styled.a`
   cursor: pointer;
@@ -52,6 +44,11 @@ const Announce = () => {
     }
   }
 
+  const openInNewTab = url => {
+    let win = window.open(url, '_blank')
+    win.focus()
+  }
+
   return (
     <React.Fragment>
       {isPortrait && isMobile ? (
@@ -63,43 +60,63 @@ const Announce = () => {
             placeContent: 'space-around'
           }}
         >
-          <a
-            href='https://sovryn.typeform.com/to/T8Y5jqe0'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <ImageButton
-              src={AnnouncementImage}
-              alt=''
-              width='100%'
-              height='auto'
-            />
-          </a>
+          <img src={AnnouncementImage} alt='' width='100%' height='auto' />
+          <ImageButton
+            src={ButtonImage}
+            alt=''
+            width='100%'
+            height='auto'
+            onClick={() =>
+              openInNewTab('https://sovryn.typeform.com/to/T8Y5jqe0')
+            }
+            style={{
+              width: '200px',
+              height: 'auto',
+              margin: '0 auto',
+              cursor: 'pointer'
+            }}
+          />
         </div>
       ) : (
         <React.Fragment>
           <div
             style={{
               width: '100vw',
-              position: 'static',
+              position: 'absolute',
               height: '100vh',
               display: 'grid',
               placeItems: 'center'
             }}
           >
+            <img src={AnnouncementImage} alt='' width='100%' height='auto' />
             <ImageButton
-              src={AnnouncementImage}
+              src={ButtonImage}
               alt=''
               width='100%'
               height='auto'
               onClick={() => addFloatingSpace('Sign Up')}
+              style={{
+                width: '250px',
+                top: '70vh',
+                position: 'absolute',
+                height: 'auto',
+                left: '50%',
+                marginLeft: '-125px',
+                cursor: 'pointer'
+              }}
             />
           </div>
         </React.Fragment>
       )}
       <TextButton
         onClick={() => addFloatingSpace('About')}
-        style={{ position: 'absolute', bottom: '50px', right: '50px' }}
+        style={{
+          position: 'absolute',
+          top: '50px',
+          left: '50px',
+          fontSize: '1.5rem',
+          fontWeight: '600'
+        }}
       >
         About
       </TextButton>
