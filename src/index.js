@@ -11,7 +11,7 @@ import './styles/init.css'
 
 WebFont.load({
   google: {
-    families: ['Fira+Code:300,400,500,700', 'monospace']
+    families: ['Montserrat:100,300,400,500,600,700', 'sans-serif']
   }
 })
 
@@ -22,7 +22,7 @@ ReactDOM.render(
         * {
           margin: 0px;
           padding: 0px;
-          font-family: 'Fira Code', monospace;
+          font-family: 'Montserrat', sans-serif;
           font-weight: 300;
           font-size: 14px;
         }

@@ -1,13 +1,12 @@
 @font-face {
-  font-family: 'Fira Code', monospace;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 300, 400, 500, 700;
-  src: url("https://fonts.googleapis.com/css?family=Fira+Code:100,300,400,500,700&display=swap");
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap");
 }
 
-
 * {
-  font-family: 'Fira Code', monospace;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 14px;
   color: black;
@@ -61,7 +60,6 @@ body {
 }
 
 .roomFont {
-  
   color: #00ffbf90;
   font-weight: 800;
   font-size: 1.1rem;
@@ -83,10 +81,10 @@ body {
   justify-self: center;
   text-align: center;
   color: whitesmoke;
-  
+
   /* font-size: 12px; */
   /* display: block; */
-  
+
   /* margin-top: -20px; */
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
   transition: 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -110,11 +108,9 @@ body {
     border: 3px groove yellow;
 } */
 
-
 /* .map-container:hover > * {
   opacity: 1;
 } */
-
 
 .container {
   position: relative;
@@ -145,9 +141,9 @@ body {
   text-shadow: 10px 10px 10px black;
   cursor: pointer;
   transform: scale(1.5);
-  
+
   /* transform: scale(2); */
-  
+
   /* z-index: 2; */
   /* border: 1px solid grey; */
 }
@@ -167,7 +163,8 @@ body {
   background-size: contain;
 }
 
-#c1:hover {  background-image: url(./img/noncon-portals/mentor-ring-hover.png);
+#c1:hover {
+  background-image: url(./img/noncon-portals/mentor-ring-hover.png);
   background-size: contain;
 }
 
@@ -180,7 +177,6 @@ body {
   background-image: url(./img/noncon-portals/cryptowiener-hover.png);
   background-size: contain;
 }
-  
 
 #c3 {
   background: url(./img/noncon-portals/loftradio.png);
@@ -217,7 +213,7 @@ body {
   background-size: contain;
 }
 
-#c6:hover{
+#c6:hover {
   background: url(./img/noncon-portals/parallelsociety-hover.png);
   background-size: contain;
 }
@@ -227,7 +223,7 @@ body {
   background-size: contain;
 }
 
-#c7:hover{ 
+#c7:hover {
   background: url(./img/noncon-portals/raffle-hover.png);
   background-size: contain;
 }
@@ -237,7 +233,7 @@ body {
   background-size: contain;
 }
 
-#c8:hover{
+#c8:hover {
   background: url(./img/noncon-portals/createroom-hover.png);
   background-size: contain;
 }
@@ -247,7 +243,7 @@ body {
   background-size: contain;
 }
 
-#c9:hover{
+#c9:hover {
   background: url(./img/noncon-portals/donate-hover.png);
   background-size: contain;
 }
@@ -287,14 +283,13 @@ body {
   box-shadow: 0px 0px 10px #00ffbf;
   color: #00ffbf;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.247);
-  
 }
 
 .click-zone:hover .roomName {
   background-color: #00000000;
   /*box-shadow: 0px 0px 10px #00ffbf;*/
   color: #00ffbf00;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.0);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
 }
 
 .scale {
