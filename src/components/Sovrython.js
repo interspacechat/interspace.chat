@@ -208,7 +208,7 @@ function SvgImagemap(props) {
               <path id="imagemap_svg__Path_6722" d="M960.5 420.866v-55.618" />
               <path id="imagemap_svg__Path_6723" d="M960.5 730.895v-58" />
             </g>
-            <g id="imagemap_svg__Sovrynlinkgroup" className="click-zone" onClick={() => openInNewTab("https://sovrython.app")}>
+            <g id="imagemap_svg__Sovrynlinkgroup" className="click-zone" onClick={() => openInNewTab("https://sovryn.app")}>
               <g id="imagemap_svg__Group_5691">
                 <path
                   id="imagemap_svg__Path_6571"
