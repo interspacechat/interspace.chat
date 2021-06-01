@@ -1,14 +1,56 @@
-import * as React from "react";
+import React, { useContext } from "react";
+import styled from "@emotion/styled";
 
-function SvgImagemap(props) {
+import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
+
+function SvgImagemapMobile(props) {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const { addFloatingSpace, currentFloatingSpaces } = useContext(
+    FloatingSpaceContext
+  );
+  const space = currentFloatingSpaces;
+
+  const openInNewTab = (url) => {
+    let win = window.open(url, "_blank");
+    win.focus();
+  };
+
+  const poap = () => {
+    if (space.indexOf("claim poap token") > -1) {
+      window.alert(
+        "To claim your Solidity Summit POAP token, please write a private message to @franzihei on Gitter, including a short note on what you liked best about the event. You will then receive a link to redeem your POAP badge."
+      );
+    } else {
+      window.alert(
+        "To claim your Solidity Summit POAP token, please write a private message to @franzihei on Gitter, including a short note on what you liked best about the event. You will then receive a link to redeem your POAP badge."
+      );
+    }
+  };
+
   return (
     <svg
-      width={1920}
-      height={1080}
-      viewBox="0 0 1920 1080"
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
       fill="none"
       {...props}
     >
+      <filter id="blur0">
+        <feGaussianBlur stdDeviation="0" />
+      </filter>
+      <filter id="blur5">
+        <feGaussianBlur stdDeviation="5" />
+      </filter>
+      <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+        <feTurbulence
+          id="sea-filter"
+          numOctaves="3"
+          seed="2"
+          baseFrequency="0.02 0.05"
+        ></feTurbulence>
+        <feDisplacementMap scale={40} in="SourceGraphic"></feDisplacementMap>
+      </filter>
       <g id="imagemap_svg__Sovrython_Dashboard">
         <path fill="#1D1D1D" d="M0 0h1920v1080H0z" />
         <g id="imagemap_svg__Web_1920_\xE2\x80\x93_1_1">
@@ -612,4 +654,4 @@ function SvgImagemap(props) {
   );
 }
 
-export default SvgImagemap;
+export default SvgImagemapMobile;

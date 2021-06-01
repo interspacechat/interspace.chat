@@ -13,6 +13,8 @@ import CalendarInstance from './integrations/CalendarInstance'
 import CryptovoxelsInstance from './integrations/CryptovoxelsInstance'
 import LoftRadioInstance from './integrations/LoftRadioInstance'
 import AboutInstance from './external-sites/AboutInstance'
+import BountiesInstance from './external-sites/BountiesInstance'
+import SovrynInstance from './external-sites/SovrynInstance'
 
 const width = window.innerWidth / 2
 const height = window.innerHeight / 2
@@ -77,16 +79,18 @@ function getFloatingRoomWindow (windowKey) {
     return <YoutubeInstance />
   } else if (RoomNames.indexOf(windowKey) > -1) {
     return <RoomInstance space={windowKey} />
-  } else if (windowKey === 'Calendar') {
+  } else if (windowKey === 'Schedule') {
     return <CalendarInstance />
   } else if (windowKey === 'About') {
     return <AboutInstance />
   } else if (windowKey === 'Chat') {
     return <ChatInstance />
-  } else if (windowKey === 'Sign Up') {
-    return <TypeformInstance />
-  } else if (windowKey === 'loft.radio') {
-    return <LoftRadioInstance />
+  } else if (windowKey === 'Bounties') {
+    return <BountiesInstance />
+  } else if (windowKey === 'Sovryn') {
+    return <SovrynInstance />
+  } else if (windowKey === 'Livestream') {
+    return <YoutubeInstance />
   } else if (windowKey === null) {
     return null
   }

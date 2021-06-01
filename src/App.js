@@ -30,7 +30,7 @@ function App () {
         <RootContextProvider>
           <SpaceContext>
             <Switch>
-              <Route path='/' exact component={Announcement} />
+              <Route path='/' exact component={Space} />
               <Route path='/partner-deck' component={Partnerdeck} />
             </Switch>
           </SpaceContext>

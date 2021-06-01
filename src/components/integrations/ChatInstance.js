@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FloatingSpaceContext } from "../../contexts/FloatingSpaceContext";
+import WidgetBot from '@widgetbot/react-embed'
 
 function ChatInstance() {
   const [discordRoom, setDiscordRoom] = useState("692409996083855501");
@@ -22,13 +23,14 @@ function ChatInstance() {
   }, [space, discordRoom]);
 
   return (
-    <iframe
-      src={`https://titanembeds.com/embed/690315811293888778?css=85&defaultchannel=${discordRoom}&theme=DiscordDark`}
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      title="discord chat"
-    ></iframe>
+    <div style={{backgroundColor: '#1D1D1D', color: '#fff', width: '100%', height: '95%', position: 'relative', overflowY: 'auto'}}>
+    <WidgetBot
+    server="729675474665603133"
+    channel="823383734664691712"
+    width="100%"
+    height="100%"
+  />
+  </div>
   );
 }
 
