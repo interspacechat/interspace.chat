@@ -4,20 +4,25 @@ import { BrowserView, MobileView } from "react-device-detect";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
-import SvgImagemap from "./SoliditySummit";
-import SvgImagemapMobile from "./SoliditySummitMobile";
+import SvgImagemap from "./Sovrython";
+import SvgImagemapMobile from "./SovrythonMobile";
 
 import triangle from "../img/triangle.svg";
 
 const Header = styled.span``;
 
 const ImagemapContainer = styled.div`
-  display: grid;
-  place-items: center;
-  max-width: 100%;
-  min-height: 90vh;
-  padding: 0;
+ display: flex;
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ margin: auto auto;
+ align-items: center; 
+ justify-content: center;
+ text-align: center; 
+ overflow-y: auto;
 `;
+
 const ImagemapContainerMobile = styled.div`
   display: grid;
   place-items: center;
@@ -147,9 +152,9 @@ const Element = () => (
       This website is optimized for <StrongStyled>desktop</StrongStyled>.{" "}
     </p>
     <p>To join the video-chat on your mobile, download the Jitsi Mobile App.</p>
-    <p>Solidity Summit livestream at:</p>
-    <a href="https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g">
-      Ethereum.org Youtube channel
+    <p>Sovrython livestream hosted by Parallele.at:</p>
+    <a href="https://www.youtube.com/channel/UCsF67FGXtv4lplQyQSPizbQ">
+      Parallele Polis Youtube channel
     </a>
   </Descripton>
 );
@@ -190,26 +195,28 @@ const Space = () => {
         <ImagemapContainer>
           <SvgImagemap />
         </ImagemapContainer>
-        <Header>
+        {/**
+         <Header>
           <SpaceInfo>
             {displayedJoinedSpaces ? (
               <Fragment>
+                <div style={{minHeight: "2rem"}}>
                 You're in <CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
+                </div>
               </Fragment>
             ) : (
               <Fragment>
-                <div>
-                  Click on a <Triangle src={triangle} height="12px" />
-                </div>
+                <div style={{minHeight: "2rem"}}/>
               </Fragment>
             )}
           </SpaceInfo>
         </Header>
+            */}
       </BrowserView>
       <MobileView>
         <ShowSection />
         <ImagemapContainerMobile>
-          <SvgImagemapMobile />
+          <SvgImagemap />
         </ImagemapContainerMobile>
       </MobileView>
     </SpaceSelector>

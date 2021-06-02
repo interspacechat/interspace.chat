@@ -30,18 +30,22 @@ ReactDOM.render(
           margin: 0px;
           padding: 0px;
           color: whitesmoke;
-          background-color: #000;
+          background-color: #1d1d1d;
         }
         .hidden {
           opacity: 0;
           filter: url(#blur0);
         }
+        .inactive {
+          filter: grayscale(100%);
+        }
         .click-zone {
           transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
           & :hover {
+            transition: 4s cubic-bezier(0.2, 0.8, 0.2, 1);
             cursor: pointer;
-            filter: url(#turbulence);
+            filter: hue-rotate(90deg);
 
             & .hidden {
               opacity: 1;
@@ -52,7 +56,9 @@ ReactDOM.render(
           transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 
           & :focus {
-            filter: url(#turbulence);
+            transition: 4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            cursor: pointer;
+            filter: hue-rotate(90deg);
 
             & .hidden {
               opacity: 1;

@@ -81,7 +81,6 @@ const Announce = () => {
         <React.Fragment>
           <div
             style={{
-              width: '100vw',
               position: 'absolute',
               height: '100vh',
               display: 'grid',

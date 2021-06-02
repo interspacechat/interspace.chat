@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
+    "@widgetbot/react-embed": "^1.4.0",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "formik": "^2.2.6",
