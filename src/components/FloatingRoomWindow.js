@@ -15,6 +15,7 @@ import LoftRadioInstance from './integrations/LoftRadioInstance'
 import AboutInstance from './external-sites/AboutInstance'
 import BountiesInstance from './external-sites/BountiesInstance'
 import SovrynInstance from './external-sites/SovrynInstance'
+import PartnersInstance from './integrations/PartnersInstance'
 
 const width = window.innerWidth / 2
 const height = window.innerHeight / 2
@@ -91,6 +92,8 @@ function getFloatingRoomWindow (windowKey) {
     return <SovrynInstance />
   } else if (windowKey === 'Livestream') {
     return <YoutubeInstance />
+  } else if (windowKey === 'Partners') {
+    return <PartnersInstance />
   } else if (windowKey === null) {
     return null
   }
@@ -134,7 +137,7 @@ function FloatingRoomWindow () {
       windowOriginX = width / 2
     } else if (windowKey === 'Schedule') {
       windowOriginX = width / 2
-    } else if (windowKey === 'youtube' || windowKey === 'livepeer') {
+    } else if (windowKey === 'Livestream' || windowKey === 'livepeer') {
       windowOriginX = 20
     } else if (
       windowKey === 'VHackathon Solidity Summit' ||
@@ -145,7 +148,6 @@ function FloatingRoomWindow () {
     } else if (
       windowKey === 'help' ||
       windowKey === 'About' ||
-      windowKey === 'new room' ||
       windowKey === 'loft.radio' ||
       windowKey === 'claim poap token'
     ) {
@@ -164,9 +166,11 @@ function FloatingRoomWindow () {
       windowKey === 'discord chat'
     ) {
       windowOriginY = 40
+    } else if (windowKey === 'Livestream') {
+      windowOriginY = 20
     } else if (windowKey === 'Schedule') {
       windowOriginY = height / 2 - 70
-    } else if (windowKey === 'youtube' || windowKey === 'livepeer') {
+    } else if (windowKey === 'Livestream' || windowKey === 'livepeer') {
       windowOriginY = height + 10
     } else if (
       windowKey === 'help' ||
@@ -185,8 +189,8 @@ function FloatingRoomWindow () {
   const setFloatingwindowColor = windowKey => {
     let bgColor = '#dab544DD'
 
-    if (windowKey === 'NFT' || windowKey === 'Workshops') {
-      bgColor = '#000000DD'
+    if (windowKey === 'Partners' || windowKey === 'Workshops') {
+      bgColor = '#C1B7A3DD'
     } else if (windowKey === 'Schedule') {
       bgColor = '#CC887ADD'
     } else if (windowKey === 'Chat') {
@@ -203,8 +207,8 @@ function FloatingRoomWindow () {
     let windowWidth = width - 20
     if (windowKey === 'VHackathon Solidity Summit') {
       windowWidth = width / 1.3
-    } else if (windowKey === 'Sign Up') {
-      windowWidth = width * 1.5
+    } else if (windowKey === 'Partners') {
+      windowWidth = width * 1.6
     } else {
       windowWidth = width - 20
     }
@@ -213,7 +217,11 @@ function FloatingRoomWindow () {
 
   const setStartingHeight = windowKey => {
     let windowHeight = height - 20
-    if (windowKey === 'Schedule' || windowKey === 'About') {
+    if (
+      windowKey === 'Partners' ||
+      windowKey === 'Schedule' ||
+      windowKey === 'About'
+    ) {
       windowHeight = height * 1.8
     } else {
       windowHeight = height - 20

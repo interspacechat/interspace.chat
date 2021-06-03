@@ -37,7 +37,7 @@ ReactDOM.render(
           filter: url(#blur0);
         }
         .inactive {
-          filter: grayscale(100%);
+          filter: url(#saturate);
         }
         .click-zone {
           transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
