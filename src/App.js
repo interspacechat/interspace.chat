@@ -11,6 +11,11 @@ import SpaceContext from './contexts/SpaceContext'
 import Header from './components/Header'
 import Announcement from './components/Announcement'
 import Partnerdeck from './pages/Partnerships'
+import PartnersInstance from './components/integrations/PartnersInstance'
+import AboutInstance from './components/external-sites/AboutInstance'
+import YoutubeInstance from './components/integrations/YoutubeInstance'
+import ChatInstance from './components/integrations/ChatInstance'
+import CalendarInstance from './components/integrations/CalendarInstance'
 
 const Wrapper = styled('div')`
   color: ${props => props.theme.body};
@@ -31,7 +36,12 @@ function App () {
           <SpaceContext>
             <Switch>
               <Route path='/' exact component={Space} />
+              <Route path='/about' exact component={AboutInstance} />
+              <Route path='/partners' exact component={PartnersInstance} />
               <Route path='/partner-deck' component={Partnerdeck} />
+              <Route path='/schedule' exact component={CalendarInstance} />
+              <Route path='/chat' exact component={ChatInstance} />
+              <Route path='/livestream' component={YoutubeInstance} />
             </Switch>
           </SpaceContext>
           <FloatingRoomWindow />

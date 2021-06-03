@@ -31,6 +31,19 @@ const PoweredBy = styled.div`
   right: 0;
   align-items: center;
 `
+const PoweredByMobile = styled.div`
+  width: 80vw;
+  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  align-items: center;
+  img {
+    margin: 0 auto;
+  }
+`
 
 const Provider = styled.img`
   transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -56,7 +69,7 @@ const ImagemapContainer = styled.div`
 const ImagemapContainerMobile = styled.div`
   display: grid;
   place-items: center;
-  min-height: 90vh;
+  min-height: 50vh;
 `
 
 const Headline = styled.h6`
@@ -319,8 +332,75 @@ const Space = () => {
       <MobileView>
         <ShowSection />
         <ImagemapContainerMobile>
-          <SvgImagemap />
+          <SvgImagemapMobile />
         </ImagemapContainerMobile>
+        <PoweredByMobile>
+          <Provider
+            src={ParalleleLogo}
+            width='40px'
+            height='40px'
+            alt='Parallele Polis'
+            onClick={() => openInNewTab('https://twitter.com/parallelepolis/')}
+          />
+          <Provider
+            src={GitcoinLogo}
+            width='40px'
+            height='40px'
+            alt='Gitcoin'
+            onClick={() => openInNewTab('https://gitcoin.co/')}
+          />
+          <Provider
+            src={InterspaceLogo}
+            width='40px'
+            height='40px'
+            alt='interspace.chat'
+            onClick={() =>
+              openInNewTab('https://gitcoin.co/grants/516/interspacechat')
+            }
+          />
+          <Provider
+            src={AkashLogo}
+            width='40px'
+            height='40px'
+            alt='Akash Network'
+            onClick={() => openInNewTab('https://twitter.com/akashnet_')}
+          />
+          <Provider
+            src={Api3Logo}
+            width='40px'
+            height='40px'
+            alt='api3'
+            onClick={() => openInNewTab('https://twitter.com/APi3dao')}
+          />
+          <Provider
+            src={CovalentLogo}
+            width='40px'
+            height='40px'
+            alt='covalent'
+            onClick={() => openInNewTab('https://twitter.com/Covalent_HQ')}
+          />
+          <Provider
+            src={EnsLogo}
+            width='40px'
+            height='40px'
+            alt='ens'
+            onClick={() => openInNewTab('https://twitter.com/ensdomains')}
+          />
+          <Provider
+            src={EthworksLogo}
+            width='100px'
+            height='auto'
+            alt='interspace.chat'
+            onClick={() => openInNewTab('https://twitter.com/ethworks')}
+          />
+          <Provider
+            src={InterlayLogo}
+            width='100px'
+            height='auto'
+            alt='interlay'
+            onClick={() => openInNewTab('https://twitter.com/InterlayHQ')}
+          />
+        </PoweredByMobile>
       </MobileView>
     </SpaceSelector>
   )
