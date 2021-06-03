@@ -40,6 +40,9 @@ function SvgImagemap (props) {
       <filter id='blur0'>
         <feGaussianBlur stdDeviation='0' />
       </filter>
+      <filter id='saturate'>
+        <feColorMatrix type='saturate' in='SourceGraphic' values='0' />
+      </filter>
       <filter id='hueRotate'>
         <feColorMatrix
           type='hueRotate'
@@ -47,9 +50,6 @@ function SvgImagemap (props) {
           in='SourceGraphic'
           result='colormatrix'
         />
-      </filter>
-      <filter id='colorMeHueRotate'>
-        <feColorMatrix type='saturate' values='0.06' />
       </filter>
       <filter id='blur5'>
         <feGaussianBlur stdDeviation='5' />
@@ -243,8 +243,8 @@ function SvgImagemap (props) {
             </g>
             <g
               id='imagemap_svg__Partnersgroup'
-              className='inactive'
-              onClick={() => notYet()}
+              className='click-zone'
+              onClick={() => addFloatingSpace('Partners')}
             >
               <path
                 id='imagemap_svg__Vector_4'
@@ -388,8 +388,8 @@ function SvgImagemap (props) {
             </g>
             <g
               id='imagemap_svg__Livestreamgroup'
-              className='inactive'
-              onClick={() => notYet()}
+              className='click-zone'
+              onClick={() => addFloatingSpace('Livestream')}
             >
               <path
                 id='imagemap_svg__Vector_14'
