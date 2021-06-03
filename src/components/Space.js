@@ -69,7 +69,7 @@ const ImagemapContainer = styled.div`
 const ImagemapContainerMobile = styled.div`
   display: grid;
   place-items: center;
-  min-height: 50vh;
+  min-height: 80vh;
 `
 
 const Headline = styled.h6`
@@ -246,6 +246,27 @@ const Space = () => {
         </ImagemapContainer>
         <PoweredBy>
           <Provider
+            src={EthworksLogo}
+            width='100px'
+            height='auto'
+            alt='interspace.chat'
+            onClick={() => openInNewTab('https://twitter.com/ethworks')}
+          />
+          <Provider
+            src={AkashLogo}
+            width='40px'
+            height='40px'
+            alt='Akash Network'
+            onClick={() => openInNewTab('https://twitter.com/akashnet_')}
+          />
+          <Provider
+            src={Api3Logo}
+            width='40px'
+            height='40px'
+            alt='api3'
+            onClick={() => openInNewTab('https://twitter.com/APi3dao')}
+          />
+          <Provider
             src={ParalleleLogo}
             width='40px'
             height='40px'
@@ -269,20 +290,6 @@ const Space = () => {
             }
           />
           <Provider
-            src={AkashLogo}
-            width='40px'
-            height='40px'
-            alt='Akash Network'
-            onClick={() => openInNewTab('https://twitter.com/akashnet_')}
-          />
-          <Provider
-            src={Api3Logo}
-            width='40px'
-            height='40px'
-            alt='api3'
-            onClick={() => openInNewTab('https://twitter.com/APi3dao')}
-          />
-          <Provider
             src={CovalentLogo}
             width='40px'
             height='40px'
@@ -295,13 +302,6 @@ const Space = () => {
             height='40px'
             alt='ens'
             onClick={() => openInNewTab('https://twitter.com/ensdomains')}
-          />
-          <Provider
-            src={EthworksLogo}
-            width='100px'
-            height='auto'
-            alt='interspace.chat'
-            onClick={() => openInNewTab('https://twitter.com/ethworks')}
           />
           <Provider
             src={InterlayLogo}
@@ -336,6 +336,27 @@ const Space = () => {
         </ImagemapContainerMobile>
         <PoweredByMobile>
           <Provider
+            src={EthworksLogo}
+            width='100px'
+            height='auto'
+            alt='interspace.chat'
+            onClick={() => openInNewTab('https://twitter.com/ethworks')}
+          />
+          <Provider
+            src={AkashLogo}
+            width='40px'
+            height='40px'
+            alt='Akash Network'
+            onClick={() => openInNewTab('https://twitter.com/akashnet_')}
+          />
+          <Provider
+            src={Api3Logo}
+            width='40px'
+            height='40px'
+            alt='api3'
+            onClick={() => openInNewTab('https://twitter.com/APi3dao')}
+          />
+          <Provider
             src={ParalleleLogo}
             width='40px'
             height='40px'
@@ -359,20 +380,6 @@ const Space = () => {
             }
           />
           <Provider
-            src={AkashLogo}
-            width='40px'
-            height='40px'
-            alt='Akash Network'
-            onClick={() => openInNewTab('https://twitter.com/akashnet_')}
-          />
-          <Provider
-            src={Api3Logo}
-            width='40px'
-            height='40px'
-            alt='api3'
-            onClick={() => openInNewTab('https://twitter.com/APi3dao')}
-          />
-          <Provider
             src={CovalentLogo}
             width='40px'
             height='40px'
@@ -385,13 +392,6 @@ const Space = () => {
             height='40px'
             alt='ens'
             onClick={() => openInNewTab('https://twitter.com/ensdomains')}
-          />
-          <Provider
-            src={EthworksLogo}
-            width='100px'
-            height='auto'
-            alt='interspace.chat'
-            onClick={() => openInNewTab('https://twitter.com/ethworks')}
           />
           <Provider
             src={InterlayLogo}

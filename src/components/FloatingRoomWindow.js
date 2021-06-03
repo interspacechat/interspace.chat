@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useReducer } from 'react'
 import styled from 'styled-components'
 import { Rnd } from 'react-rnd'
+import { isMobile } from 'react-device-detect'
 
 import { FloatingSpaceContext } from '../contexts/FloatingSpaceContext'
 
@@ -169,7 +170,7 @@ function FloatingRoomWindow () {
     } else if (windowKey === 'Livestream') {
       windowOriginY = 20
     } else if (windowKey === 'Schedule') {
-      windowOriginY = height / 2 - 70
+      windowOriginY = 30
     } else if (windowKey === 'Livestream' || windowKey === 'livepeer') {
       windowOriginY = height + 10
     } else if (

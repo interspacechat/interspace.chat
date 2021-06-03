@@ -20,6 +20,9 @@ const InstanceContainer = styled.div`
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
       sans-serif !important;
   }
+  @media (max-width: 500px) {
+    height: 100vh;
+  }
 `
 
 function CalendarInstance () {
@@ -32,7 +35,6 @@ function CalendarInstance () {
         height='80%'
         width='100%'
         style={{
-          width: '100%',
           border: '0px'
         }}
       />
