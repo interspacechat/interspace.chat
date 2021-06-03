@@ -9,18 +9,16 @@ import EnsLogo from '../../img/sovrython/ens-logo.svg'
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  background-color: #1d1d1dee;
+  grid-gap: 2rem;
+  grid-template-rows: repeat(5, auto);
   justify-content: center;
-  padding: 4rem;
-  max-width: 800px;
+  padding: 5rem;
   margin: 0 auto;
 `
 
 const Card = styled.div`
-  padding: 1rem;
-  margin: 1rem auto;
-  background-color: #1d1d1dee;
-  border-radius: 0.5rem;
+  margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(5, auto);
   text-align: center;
@@ -32,7 +30,7 @@ const Card = styled.div`
 `
 const Logo = styled.img`
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.2rem;
 `
 
 const ProjectName = styled.h1`
@@ -67,7 +65,7 @@ const PartnersInstance = () => {
     >
       <Container>
         <Card id='Akash Network'>
-          <Logo src={AkashLogo} width='auto' height='200px' alt='' />
+          <Logo src={AkashLogo} width='auto' height='40px' alt='' />
           <ProjectName>Akash Network</ProjectName>
           <Links>
             <a
@@ -155,7 +153,7 @@ const PartnersInstance = () => {
           <Blankspace />
         </Card>
         <Card id='Api3'>
-          <Logo src={Api3Logo} width='auto' height='200px' alt='' />
+          <Logo src={Api3Logo} width='auto' height='40px' alt='' />
           <ProjectName>Api3</ProjectName>
           <Links>
             <a
@@ -247,7 +245,7 @@ const PartnersInstance = () => {
           <Blankspace />
         </Card>
         <Card id='Interlay'>
-          <Logo src={InterlayLogo} width='400px' height='auto' alt='' />
+          <Logo src={InterlayLogo} width='80px' height='auto' alt='' />
           <ProjectName>Interlay</ProjectName>
           <Links>
             <a
@@ -319,7 +317,7 @@ const PartnersInstance = () => {
           <Blankspace />
         </Card>
         <Card id='Covalent'>
-          <Logo src={CovalentLogo} width='auto' height='200px' alt='' />
+          <Logo src={CovalentLogo} width='auto' height='40px' alt='' />
           <ProjectName>Covalent</ProjectName>
           <Links>
             <a
@@ -371,7 +369,7 @@ const PartnersInstance = () => {
           <Blankspace />
         </Card>
         <Card id='ens'>
-          <Logo src={EnsLogo} width='auto' height='200px' alt='' />
+          <Logo src={EnsLogo} width='auto' height='40px' alt='' />
           <ProjectName>ENS domains</ProjectName>
           <Links>
             <a
