@@ -29,8 +29,9 @@ function CalendarInstance () {
       <iframe
         title='Schedule'
         src={`https://calendar.google.com/calendar/embed?src=mndjqf9dhc3ski784qloec28e4%40group.calendar.google.com&ctz=${timezone}`}
+        height='80%'
+        width='100%'
         style={{
-          height: '80%',
           width: '100%',
           border: '0px'
         }}
@@ -59,6 +60,7 @@ function CalendarInstance () {
           right: 0,
           margin: '0 auto',
           width: '70%',
+          height: '300px',
           cursor: 'pointer',
           borderRadius: '1rem'
         }}
