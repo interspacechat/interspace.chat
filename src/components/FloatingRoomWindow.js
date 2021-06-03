@@ -191,6 +191,8 @@ function FloatingRoomWindow () {
       bgColor = '#CC887ADD'
     } else if (windowKey === 'Chat') {
       bgColor = '#8B9EB1DD'
+    } else if (windowKey === 'Livestream') {
+      bgColor = '#98BBB1DD'
     } else {
       bgColor = '#dab544DD'
     }
