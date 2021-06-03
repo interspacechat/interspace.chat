@@ -10,18 +10,26 @@ import SvgImagemapMobile from './SovrythonMobile'
 import ParalleleLogo from '../img/sovrython/Parallele-logo.svg'
 import GitcoinLogo from '../img/sovrython/Gitcoin-logo.svg'
 import InterspaceLogo from '../img/sovrython/Interspacechat-logo.svg'
+import AkashLogo from '../img/sovrython/akash-network-logo.png'
+import Api3Logo from '../img/sovrython/api3-logo.png'
+import InterlayLogo from '../img/sovrython/interlay-logo.png'
+import CovalentLogo from '../img/sovrython/covalent-logo.svg'
+import EnsLogo from '../img/sovrython/ens-logo.svg'
+import EthworksLogo from '../img/sovrython/ethworks-logo.svg'
 
 const Header = styled.span``
 
 const PoweredBy = styled.div`
   position: absolute;
   bottom: 1rem;
-  width: 150px;
+  width: 80vw;
+  justify-content: space-evenly;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   margin: 0 auto;
   left: 0;
   right: 0;
+  align-items: center;
 `
 
 const Provider = styled.img`
@@ -246,6 +254,48 @@ const Space = () => {
             onClick={() =>
               openInNewTab('https://gitcoin.co/grants/516/interspacechat')
             }
+          />
+          <Provider
+            src={AkashLogo}
+            width='40px'
+            height='40px'
+            alt='Akash Network'
+            onClick={() => openInNewTab('https://twitter.com/akashnet_')}
+          />
+          <Provider
+            src={Api3Logo}
+            width='40px'
+            height='40px'
+            alt='api3'
+            onClick={() => openInNewTab('https://twitter.com/APi3dao')}
+          />
+          <Provider
+            src={CovalentLogo}
+            width='40px'
+            height='40px'
+            alt='covalent'
+            onClick={() => openInNewTab('https://twitter.com/Covalent_HQ')}
+          />
+          <Provider
+            src={EnsLogo}
+            width='40px'
+            height='40px'
+            alt='ens'
+            onClick={() => openInNewTab('https://twitter.com/ensdomains')}
+          />
+          <Provider
+            src={EthworksLogo}
+            width='100px'
+            height='auto'
+            alt='interspace.chat'
+            onClick={() => openInNewTab('https://twitter.com/ethworks')}
+          />
+          <Provider
+            src={InterlayLogo}
+            width='100px'
+            height='auto'
+            alt='interlay'
+            onClick={() => openInNewTab('https://twitter.com/InterlayHQ')}
           />
         </PoweredBy>
         {/**
