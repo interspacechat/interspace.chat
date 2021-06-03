@@ -132,7 +132,7 @@ function FloatingRoomWindow () {
       windowOriginX = width
     } else if (windowKey === 'claim poap token') {
       windowOriginX = width / 2
-    } else if (windowKey === 'calendar') {
+    } else if (windowKey === 'Schedule') {
       windowOriginX = width / 2
     } else if (windowKey === 'youtube' || windowKey === 'livepeer') {
       windowOriginX = 20
@@ -164,7 +164,7 @@ function FloatingRoomWindow () {
       windowKey === 'discord chat'
     ) {
       windowOriginY = 40
-    } else if (windowKey === 'calendar') {
+    } else if (windowKey === 'Schedule') {
       windowOriginY = height / 2 - 70
     } else if (windowKey === 'youtube' || windowKey === 'livepeer') {
       windowOriginY = height + 10
@@ -187,6 +187,10 @@ function FloatingRoomWindow () {
 
     if (windowKey === 'NFT' || windowKey === 'Workshops') {
       bgColor = '#000000DD'
+    } else if (windowKey === 'Schedule') {
+      bgColor = '#CC887ADD'
+    } else if (windowKey === 'Chat') {
+      bgColor = '#8B9EB1DD'
     } else {
       bgColor = '#dab544DD'
     }
@@ -207,7 +211,7 @@ function FloatingRoomWindow () {
 
   const setStartingHeight = windowKey => {
     let windowHeight = height - 20
-    if (windowKey === 'Sign Up' || windowKey === 'About') {
+    if (windowKey === 'Schedule' || windowKey === 'About') {
       windowHeight = height * 1.8
     } else {
       windowHeight = height - 20
