@@ -45,11 +45,11 @@ ReactDOM.render(
           & :hover {
             transition: 4s cubic-bezier(0.2, 0.8, 0.2, 1);
             cursor: pointer;
-            filter: hue-rotate(90deg);
+            filter: url(#hueRotate);
+          }
 
-            & .hidden {
-              opacity: 1;
-            }
+          & .hidden {
+            opacity: 1;
           }
         }
         .click-zone-mobile {
