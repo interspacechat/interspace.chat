@@ -11,7 +11,7 @@ import './styles/init.css'
 
 WebFont.load({
   google: {
-    families: ['RobotoMono:100,300,400,500,600,700', 'monospace']
+    families: ['Roboto+Mono:100,300,400,500,600,700', 'monospace']
   }
 })
 
