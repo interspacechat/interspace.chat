@@ -19,12 +19,12 @@ const Grid = styled.div`
     height: auto;
   }
   div {
-    transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-    transform: scale(1.1);
+    transition: 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: 300px;
+    border: 2px solid #ffffff00;
+    max-height: 300px;
     &:hover {
       div {
-        transform: scale(1.3);
-        border-radius: 3000px;
         border: 2px solid #b30602aa;
       }
       h1 {
@@ -33,12 +33,17 @@ const Grid = styled.div`
       .portal {
         filter: drop-shadow(8px 8px 10px gray);
       }
+      .title {
+        opacity: 1;
+      }
       cursor: pointer;
     }
   }
   .title {
+    font-size: 0.8rem;
     opacity: 0.5;
-    z-index: 1;
+    place-self: center;
+    position: absolute;
   }
   .portal {
     transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -46,137 +51,73 @@ const Grid = styled.div`
 `
 
 const Cell1 = styled.div`
-  // transform: scale(1.5) translate(40px, 50px);
-  display: flex;
+  transform: scale(1.5);
+  display: grid;
   grid-row: 1;
   grid-column: 1;
-  .title {
-    position: relative;
-    transform: translate(100%, 50%);
-  }
-  &:hover .title {
-    opacity: 1;
-  }
-  .portal {
-    place-self: center;
-  }
-  &:hover .portal {
-    transform: scale(2);
-  }
 `
 
 const Cell2 = styled.div`
-  display: flex;
+  transform: scale(1.5) translate(-100px, 0px);
+  display: grid;
   grid-row: 2;
   grid-column: 1;
-  align-self: center;
-  z-index: 10;
-  .title {
-    position: relative;
-    transform: translate(100%, 50%);
-  }
-  .portal {
-    place-self: center;
-  }
-  &:hover .title {
-    opacity: 1;
-  }
 `
 
 const Cell3 = styled.div`
-  // transform: scale(1.5) translate(40px, 50px);
-  display: flex;
+  transform: scale(1.5);
+  display: grid;
   grid-row: 3;
   grid-column: 1;
-  .portal {
-    place-self: center;
-  }
-  .title {
-    position: relative;
-    transform: translate(100%, 50%);
-  }
-  &:hover .title {
-    opacity: 1;
-  }
-  .portal {
-    transform: translate(0px, 100px);
-  }
 `
 
 const Cell4 = styled.div`
-  // transform: scale(1.5) translate(-40px, 50px);
-  display: flex;
+  transform: scale(1.5);
+  display: grid;
   grid-row: 1;
   grid-column: 3;
-  .portal {
-  }
-  .title {
-    position: relative;
-    transform: translate(400%, 50%);
-  }
-  &:hover .title {
-    opacity: 1;
-  }
 `
 
 const Cell5 = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  position: absolute;
-  max-width: 80%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 20%;
   height: auto;
   width: auto;
+  grid-row: 2;
+  grid-column: 2;
   .portal {
-    position: relative;
-    height: 300px;
-    width: 180px;
+    position: absolute;
+    max-height: 300px;
+    max-width: 180px;
     margin: 0 auto;
+    left: 0;
+    right: 0;
   }
   .title {
-    align-self: center;
-    font-size: 1.4rem;
-    transform: translate(0%, 70px);
+    position: relative;
+    align-self: flex-end;
+    transform: translateY(70px);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    font-size: 1.5rem;
   }
   &:hover .title {
     opacity: 1;
   }
 `
 const Cell6 = styled.div`
-  // transform: scale(1.5) translate(-40px, 50px);
-  display: flex;
+  transform: scale(1.5) translate(100px, 0px);
+  display: grid;
   grid-row: 2;
   grid-column: 3;
-  &:hover .title {
-    opacity: 1;
-  }
-  .title {
-    position: relative;
-    transform: translate(400%, 50%);
-  }
-  .portal {
-    align-self: center;
-  }
 `
 
 const Cell7 = styled.div`
-  // transform: scale(1.5) translate(-40px, 50px);
-  display: flex;
+  transform: scale(1.5);
+  display: grid;
   grid-row: 3;
   grid-column: 3;
-  &:hover .title {
-    opacity: 1;
-  }
-  .title {
-    position: relative;
-    transform: translate(400%, 50%);
-  }
-  .portal {
-    align-self: center;
-  }
 `
 
 const Cell8 = styled.div`
@@ -257,6 +198,13 @@ const EthCC = () => {
   return (
     <ImagemapContainer>
       <Grid>
+        <Cell5 onClick={() => addFloatingSpace('schedule')}>
+          <img className='portal' src={EthCClogo} alt='' />
+          <h1 className='title'>
+            EthCC <br />
+            <strong>SCHEDULE</strong>
+          </h1>
+        </Cell5>
         <Cell1 onClick={() => addFloatingSpace('stream1')}>
           <h1 className='title'>STREAM_1</h1>
           <Balloon
@@ -293,10 +241,6 @@ const EthCC = () => {
             height={'auto'}
           />
         </Cell4>
-        <Cell5 onClick={() => addFloatingSpace('schedule')}>
-          <h1 className='title'>SCHEDULE</h1>
-          <img className='portal' src={EthCClogo} alt='' />
-        </Cell5>
         <Cell6 onClick={() => addFloatingSpace('stream5')}>
           <h1 className='title'>STREAM_5</h1>
           <Balloon className='portal' color={'white'} width={'400px'} />

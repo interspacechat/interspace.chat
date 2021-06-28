@@ -100,7 +100,6 @@ const SponsorContainer2 = styled.div`
 
 const PoweredByGold = styled.div`
   display: grid;
-  width: 40vw;
   justify-content: center;
   grid-template-columns: repeat(2, auto);
   margin: 0 auto;
@@ -109,47 +108,60 @@ const PoweredByGold = styled.div`
   grid-gap: 3rem;
   img {
     padding: 0.5rem;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `
 
 const PoweredBySilver = styled.div`
   display: grid;
-  width: 40vw;
   justify-content: center;
   grid-template-columns: repeat(6, auto);
   margin: 0 auto;
   align-items: center;
   padding: 1rem;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   img {
+    place-self: center;
     padding: 0.5rem;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `
 
 const PoweredByBronze = styled.div`
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(14, auto);
+  grid-template-columns: repeat(7, auto);
   margin: 0 auto;
   align-items: center;
   padding: 1rem;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   img {
+    place-self: center;
     padding: 0.5rem;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `
 
 const PoweredByIron = styled.div`
   display: grid;
-  width: 40vw;
   justify-content: center;
-  grid-template-columns: repeat(16, auto);
+  grid-template-columns: repeat(8, 1fr);
   margin: 0 auto;
   align-items: center;
   padding: 1rem;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   img {
+    place-self: center;
     padding: 0.5rem;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 `
 
