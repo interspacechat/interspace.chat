@@ -7,18 +7,14 @@ const InstanceContainer = styled.div`
   height: 100%;
   grid-template-rows: 1fr auto;
   li {
-    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: 'Roboto Mono', monospace;
     background-color: #aaaaaa;
     color: '#310C4FDD';
   }
   input {
     border-radius: 1rem !important;
     background-color: #ffffffcc !important;
-    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-      sans-serif !important;
+    font-family: 'Roboto Mono', monospace !important;
   }
   @media (max-width: 500px) {
     height: 100vh;

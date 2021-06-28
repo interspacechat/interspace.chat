@@ -81,7 +81,7 @@ function getFloatingRoomWindow (windowKey) {
     return <YoutubeInstance />
   } else if (RoomNames.indexOf(windowKey) > -1) {
     return <RoomInstance space={windowKey} />
-  } else if (windowKey === 'schedule') {
+  } else if (windowKey === 'Schedule') {
     return <CalendarInstance />
   } else if (windowKey === 'About') {
     return <AboutInstance />
@@ -213,7 +213,7 @@ function FloatingRoomWindow () {
       bgColor = '#b30602DD'
     } else if (windowKey === 'Status Chat') {
       bgColor = '#082d75DD'
-    } else if (windowKey === 'schedule') {
+    } else if (windowKey === 'Schedule') {
       bgColor = '#E6E6E6DD'
     } else {
       bgColor = '#dab544DD'

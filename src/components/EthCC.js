@@ -201,7 +201,7 @@ const EthCC = () => {
   return (
     <ImagemapContainer>
       <Grid>
-        <Cell5 onClick={() => addFloatingSpace('schedule')}>
+        <Cell5 onClick={() => addFloatingSpace('Schedule')}>
           <img className='portal' src={EthCClogo} alt='' />
           <h1 className='title'>
             EthCC <br />
