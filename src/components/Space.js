@@ -63,7 +63,7 @@ import EnsLogo from '../img/sovrython/ens-logo.svg'
 import EthworksLogo from '../img/sovrython/ethworks-logo.svg'
 
 import EthCC from './EthCC'
-import EthturinMobile from './EthturinMobile'
+import EthCCMobile from './EthCCMobile'
 
 const Header = styled.span``
 
@@ -259,10 +259,11 @@ const SpaceInfo = styled.div`
 `
 
 const Descripton = styled.div`
-  z-index: 1;
+  z-index: 111;
   margin: 0px;
   font-size: 0.8rem;
   padding-bottom: 0.4rem;
+  background-color: white;
   p {
     padding: 0.5rem;
     margin: 0px;
@@ -343,10 +344,10 @@ const Element = () => (
     <p>
       This website is optimized for <StrongStyled>desktop</StrongStyled>.{' '}
     </p>
-    <p>To join the video-chat on your mobile, download the Jitsi Mobile App.</p>
-    <p>Sovrython livestream hosted by Parallele.at:</p>
-    <a href='https://www.youtube.com/channel/UCsF67FGXtv4lplQyQSPizbQ'>
-      Parallele Polis Youtube channel
+
+    <p>EthCC livestream can also be accessed on:</p>
+    <a href='https://www.youtube.com/channel/UCf7zF8tFOb9T58nBo09BhAw'>
+      'Ethereum France' Youtube channel
     </a>
   </Descripton>
 )
@@ -703,76 +704,23 @@ const Space = () => {
       </BrowserView>
       <MobileView>
         <ShowSection />
-        <ImagemapContainerMobile>
-          <EthturinMobile />
-        </ImagemapContainerMobile>
-        <PoweredByMobile>
-          <Provider
-            src={EthworksLogo}
-            width='100px'
-            height='auto'
-            alt='interspace.chat'
-            onClick={() => openInNewTab('https://twitter.com/ethworks')}
-          />
-          <Provider
+
+        <SponsorContainer2
+          className='click-zone'
+          onClick={() => openInNewTab('/')}
+        >
+          <img
             src={EthCCLogo}
-            width='40px'
-            height='40px'
-            alt='Akash Network'
-            onClick={() => openInNewTab('https://twitter.com/akashnet_')}
-          />
-          <Provider
-            src={Api3Logo}
-            width='40px'
-            height='40px'
-            alt='api3'
-            onClick={() => openInNewTab('https://twitter.com/APi3dao')}
-          />
-          <Provider
-            src={ParalleleLogo}
-            width='40px'
-            height='40px'
-            alt='Parallele Polis'
-            onClick={() => openInNewTab('https://twitter.com/parallelepolis/')}
-          />
-          <Provider
-            src={GitcoinLogo}
-            width='40px'
-            height='40px'
-            alt='Gitcoin'
-            onClick={() => openInNewTab('https://gitcoin.co/')}
-          />
-          <Provider
-            src={InterspaceLogo}
-            width='40px'
-            height='40px'
-            alt='interspace.chat'
-            onClick={() =>
-              openInNewTab('https://gitcoin.co/grants/516/interspacechat')
-            }
-          />
-          <Provider
-            src={CovalentLogo}
-            width='40px'
-            height='40px'
-            alt='covalent'
-            onClick={() => openInNewTab('https://twitter.com/Covalent_HQ')}
-          />
-          <Provider
-            src={EnsLogo}
-            width='40px'
-            height='40px'
-            alt='ens'
-            onClick={() => openInNewTab('https://twitter.com/ensdomains')}
-          />
-          <Provider
-            src={InterlayLogo}
-            width='100px'
+            width='25px'
             height='auto'
-            alt='interlay'
-            onClick={() => openInNewTab('https://twitter.com/InterlayHQ')}
+            alt='ethcc4'
+            style={{ padding: '1rem' }}
           />
-        </PoweredByMobile>
+          <h1>
+            EthCC<span>[4]</span> - July 20-22, 2021
+          </h1>
+        </SponsorContainer2>
+        <EthCCMobile />
       </MobileView>
     </SpaceSelector>
   )
