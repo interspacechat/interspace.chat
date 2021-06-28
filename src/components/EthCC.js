@@ -164,6 +164,9 @@ const BottomLinks = styled.span`
   div {
     text-align: center;
     padding: 1rem;
+    :hover {
+      transform: scale(1.2);
+    }
   }
 `
 
