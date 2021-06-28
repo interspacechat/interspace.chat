@@ -154,7 +154,7 @@ const Cell10 = styled.div`
 `
 
 const BottomLinks = styled.span`
-  padding: 2rem;
+  padding: 4rem;
   grid-row: 4;
   grid-column: 1 / 4;
   display: grid;
