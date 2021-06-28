@@ -261,7 +261,7 @@ const EthCC = () => {
           <h1 className='title'>STREAM_1</h1>
           <Balloon
             className='portal'
-            color='white'
+            color='blue'
             width={'400px'}
             height={'auto'}
           />
@@ -270,7 +270,7 @@ const EthCC = () => {
           <h1 className='title'>STREAM_2</h1>
           <Balloon
             className='portal'
-            color='blue'
+            color='white'
             width={'400px'}
             height={'auto'}
           />
@@ -303,7 +303,7 @@ const EthCC = () => {
         </Cell6>
         <Cell7 onClick={() => addFloatingSpace('stream6')}>
           <h1 className='title'>STREAM_6</h1>
-          <Balloon className='portal' color={'white'} width={'400px'} />
+          <Balloon className='portal' color={'red'} width={'400px'} />
         </Cell7>
         <BottomLinks>
           <Cell8 onClick={() => addFloatingSpace('Status Chat')}>
