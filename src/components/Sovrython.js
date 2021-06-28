@@ -26,7 +26,7 @@ function SvgImagemap (props) {
   }
 
   const notYet = () => {
-    alert('Live on June 4th @12pm UTC')
+    alert('Live on July 12th')
   }
 
   return (

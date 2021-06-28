@@ -7,14 +7,14 @@ const yellow = '#dab544'
 const blue = '#031695'
 
 const themeLight = {
-  background: '#1d1d1d',
-  body: gray,
+  background: white,
+  body: black,
   highlight: yellow
 }
 
 const themeDark = {
-  background: '#1d1d1d',
-  body: gray,
+  background: white,
+  body: black,
   highlight: yellow
 }
 

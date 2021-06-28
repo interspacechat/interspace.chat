@@ -11,7 +11,7 @@ import './styles/init.css'
 
 WebFont.load({
   google: {
-    families: ['Montserrat:100,300,400,500,600,700', 'sans-serif']
+    families: ['RobotoMono:100,300,400,500,600,700', 'monospace']
   }
 })
 
@@ -22,15 +22,15 @@ ReactDOM.render(
         * {
           margin: 0px;
           padding: 0px;
-          font-family: 'Montserrat', sans-serif;
+          font-family: 'Roboto Mono', monospace;
           font-weight: 300;
           font-size: 14px;
         }
         body {
           margin: 0px;
           padding: 0px;
-          color: whitesmoke;
-          background-color: #1d1d1d;
+          color: #000;
+          background-color: #fff;
         }
         .hidden {
           opacity: 0;

@@ -81,7 +81,7 @@ function getFloatingRoomWindow (windowKey) {
     return <YoutubeInstance />
   } else if (RoomNames.indexOf(windowKey) > -1) {
     return <RoomInstance space={windowKey} />
-  } else if (windowKey === 'Schedule') {
+  } else if (windowKey === 'schedule') {
     return <CalendarInstance />
   } else if (windowKey === 'About') {
     return <AboutInstance />
@@ -91,7 +91,17 @@ function getFloatingRoomWindow (windowKey) {
     return <BountiesInstance />
   } else if (windowKey === 'Sovryn') {
     return <SovrynInstance />
-  } else if (windowKey === 'Livestream') {
+  } else if (windowKey === 'stream1') {
+    return <YoutubeInstance />
+  } else if (windowKey === 'stream2') {
+    return <YoutubeInstance />
+  } else if (windowKey === 'stream3') {
+    return <YoutubeInstance />
+  } else if (windowKey === 'stream4') {
+    return <YoutubeInstance />
+  } else if (windowKey === 'stream5') {
+    return <YoutubeInstance />
+  } else if (windowKey === 'stream6') {
     return <YoutubeInstance />
   } else if (windowKey === 'Partners') {
     return <PartnersInstance />
@@ -192,12 +202,19 @@ function FloatingRoomWindow () {
 
     if (windowKey === 'Partners' || windowKey === 'Workshops') {
       bgColor = '#C1B7A3DD'
-    } else if (windowKey === 'Schedule') {
-      bgColor = '#CC887ADD'
-    } else if (windowKey === 'Chat') {
-      bgColor = '#8B9EB1DD'
-    } else if (windowKey === 'Livestream') {
-      bgColor = '#98BBB1DD'
+    } else if (
+      windowKey === 'stream1' ||
+      windowKey === 'stream2' ||
+      windowKey === 'stream3' ||
+      windowKey === 'stream4' ||
+      windowKey === 'stream5' ||
+      windowKey === 'stream6'
+    ) {
+      bgColor = '#b30602DD'
+    } else if (windowKey === 'Status Chat') {
+      bgColor = '#082d75DD'
+    } else if (windowKey === 'schedule') {
+      bgColor = '#E6E6E6DD'
     } else {
       bgColor = '#dab544DD'
     }
