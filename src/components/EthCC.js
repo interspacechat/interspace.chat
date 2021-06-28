@@ -152,13 +152,21 @@ const Cell10 = styled.div`
     opacity: 1;
   }
 `
+const Cell11 = styled.div`
+  display: flex;
+  .title {
+  }
+  &:hover .title {
+    opacity: 1;
+  }
+`
 
 const BottomLinks = styled.span`
   padding: 4rem;
   grid-row: 4;
   grid-column: 1 / 4;
   display: grid;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(4, 150px);
   justify-self: center;
   justify-items: center;
   div {
@@ -262,6 +270,9 @@ const EthCC = () => {
           <Cell10 onClick={() => openInNewTab('https://twitter.com/ethcc')}>
             <h1 className='portal'>Twitter</h1>
           </Cell10>
+          <Cell11 onClick={() => addFloatingSpace('OpenSea')}>
+            <h1 className='portal'>Auction</h1>
+          </Cell11>
         </BottomLinks>
       </Grid>
     </ImagemapContainer>

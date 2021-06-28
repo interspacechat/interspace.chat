@@ -17,6 +17,7 @@ import AboutInstance from './external-sites/AboutInstance'
 import BountiesInstance from './external-sites/BountiesInstance'
 import SovrynInstance from './external-sites/SovrynInstance'
 import PartnersInstance from './integrations/PartnersInstance'
+import OpenseaInstance from './external-sites/OpenseaInstance'
 
 const width = window.innerWidth / 2
 const height = window.innerHeight / 2
@@ -83,6 +84,8 @@ function getFloatingRoomWindow (windowKey) {
     return <RoomInstance space={windowKey} />
   } else if (windowKey === 'Schedule') {
     return <CalendarInstance />
+  } else if (windowKey === 'OpenSea') {
+    return <OpenseaInstance />
   } else if (windowKey === 'About') {
     return <AboutInstance />
   } else if (windowKey === 'Chat') {
@@ -148,21 +151,26 @@ function FloatingRoomWindow () {
       windowOriginX = width / 2
     } else if (windowKey === 'Schedule') {
       windowOriginX = width / 2
-    } else if (windowKey === 'Livestream' || windowKey === 'livepeer') {
+    } else if (windowKey === 'stream1' || windowKey === 'livepeer') {
       windowOriginX = 20
     } else if (
-      windowKey === 'VHackathon Solidity Summit' ||
+      windowKey === 'OpenSea' ||
       windowKey === 'credits' ||
       windowKey === 'Sign Up'
     ) {
       windowOriginX = width / 4
     } else if (
-      windowKey === 'help' ||
       windowKey === 'About' ||
       windowKey === 'loft.radio' ||
       windowKey === 'claim poap token'
     ) {
       windowOriginX = width / 2
+    } else if (
+      windowKey === 'stream4' ||
+      windowKey === 'stream5' ||
+      windowKey === 'stream6'
+    ) {
+      windowOriginX = width
     } else {
       windowOriginX = 20
     }
@@ -171,17 +179,21 @@ function FloatingRoomWindow () {
   const setStartingCoordinatesY = windowKey => {
     let windowOriginY = 40
     if (
-      windowKey === 'VHackathon Solidity Summit' ||
-      windowKey === 'credits' ||
+      windowKey === 'stream2' ||
+      windowKey === 'stream5' ||
       windowKey === 'About' ||
-      windowKey === 'discord chat'
+      windowKey === 'Status Chat'
     ) {
-      windowOriginY = 40
-    } else if (windowKey === 'Livestream') {
+      windowOriginY = height / 2
+    } else if (windowKey === 'stream1' || windowKey === 'stream4') {
       windowOriginY = 20
     } else if (windowKey === 'Schedule') {
       windowOriginY = 30
-    } else if (windowKey === 'Livestream' || windowKey === 'livepeer') {
+    } else if (
+      windowKey === 'stream3' ||
+      windowKey === 'OpenSea' ||
+      windowKey === 'stream6'
+    ) {
       windowOriginY = height + 10
     } else if (
       windowKey === 'help' ||
@@ -211,7 +223,7 @@ function FloatingRoomWindow () {
       windowKey === 'stream6'
     ) {
       bgColor = '#b30602DD'
-    } else if (windowKey === 'Status Chat') {
+    } else if (windowKey === 'Status Chat' || windowKey === 'OpenSea') {
       bgColor = '#082d75DD'
     } else if (windowKey === 'Schedule') {
       bgColor = '#E6E6E6DD'
