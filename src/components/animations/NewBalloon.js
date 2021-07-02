@@ -3,7 +3,7 @@ import * as React from 'react'
 function SvgImagemap (props) {
   const ballooncolor = props.color
   return (
-    <svg width={60} height={300} xmlns='http://www.w3.org/2000/svg' {...props}>
+    <svg width={80} height={300} xmlns='http://www.w3.org/2000/svg' {...props}>
       <defs>
         <radialGradient
           id='balloon_shine'
@@ -27,7 +27,7 @@ function SvgImagemap (props) {
             <animate
               attributeType='XML'
               attributeName='d'
-              values='M30 86 c0 10 -10 90 0 131; M30 91 c0 10 3 90 0 136; M30 93 c0 10 10 90 0 138; M30 91 c0 10 -3 90 0 136; M30 86 c0 10 -10 90 0 131'
+              values='M40 86 c0 10 -10 90 0 131; M40 91 c0 10 3 90 0 136; M40 93 c0 10 10 90 0 138; M40 91 c0 10 -3 90 0 136; M40 86 c0 10 -10 90 0 131'
               keyTimes='0; 0.25; 0.5; 0.75; 1'
               dur='5s'
               repeatCount='indefinite'
@@ -42,14 +42,14 @@ function SvgImagemap (props) {
             <animate
               attributeType='XML'
               attributeName='d'
-              values='M30 86 l3 10 l-6 0 z; M30 91 l3 10 l-6 0 z; M30 93 l3 10 l-6 0 z; M30 91 l3 10 l-6 0 z; M30 86 l3 10 l-6 0 z'
+              values='M40 86 l3 10 l-6 0 z; M40 91 l3 10 l-6 0 z; M40 93 l3 10 l-6 0 z; M40 91 l3 10 l-6 0 z; M40 86 l3 10 l-6 0 z'
               keyTimes='0;0.25;0.5;0.75;1'
               dur='2.5s'
               repeatCount='indefinite'
             />
           </path>
           <ellipse
-            cx={30}
+            cx={40}
             cy={50}
             rx={30}
             ry={40}
@@ -67,7 +67,7 @@ function SvgImagemap (props) {
             />
           </ellipse>
           <ellipse
-            cx={30}
+            cx={40}
             cy={43}
             rx={30}
             ry={40}

@@ -38,7 +38,7 @@ const Grid = styled.div`
       svg {
         // border: 2px solid #b30602aa;
         // transform: scale(1.2);
-        filter: drop-shadow(8px 8px 10px gray);
+        filter: drop-shadow(5px 5px 5px gray);
       }
       h1 {
         color: #b30602;
@@ -103,8 +103,9 @@ const Cell4 = styled.div`
 `
 
 const Cell5 = styled.div`
-  display: flex;
+  display: grid;
   flex-direction: column;
+  place-content: center;
   height: auto;
   width: auto;
   grid-row: 1;
@@ -268,7 +269,7 @@ const EthCC = () => {
         >
           <img className='portal' src={EthCClogo} alt='' />
           <h1 className='title'>
-            <strong style={{ fontSize: '2rem' }}>
+            <strong style={{ fontSize: '2rem' }} className='bleu'>
               EthCC<span>[4]</span>
             </strong>
           </h1>
