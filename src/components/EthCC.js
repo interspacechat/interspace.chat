@@ -24,7 +24,7 @@ const Grid = styled.div`
     border-radius: 300px;
     border: 2px solid #ffffff00;
     max-height: 300px;
-    max-width: 120px;
+    max-width: 80px;
     align-self: center6;
     color: #e6e6e6;
     h1 {
@@ -122,13 +122,15 @@ const Cell5 = styled.div`
     transform: translateY(10px);
     font-size: 1.5rem;
     color: black;
+    margin: 0 auto;
   }
   &:hover .title {
     opacity: 1;
   }
   @media (max-width: 1620px) {
-    grid-row: 1 / 2;
+    grid-row: 1 / span 2;
     grid-column: 4;
+    margin: auto auto;
   }
 `
 const Cell6 = styled.div`
