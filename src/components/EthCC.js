@@ -14,7 +14,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(13, 1fr);
   grid-template-rows: repeat(1, auto);
   justify-items: center;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-template-columns: repeat(7, 1fr);
   }
   img {
@@ -96,7 +96,7 @@ const Cell4 = styled.div`
   display: grid;
   // grid-row: 2;
   grid-column: 11;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 1;
     grid-column: 5;
   }
@@ -127,7 +127,7 @@ const Cell5 = styled.div`
   &:hover .title {
     opacity: 1;
   }
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 1 / span 2;
     grid-column: 4;
     margin: auto auto;
@@ -138,7 +138,7 @@ const Cell6 = styled.div`
   display: grid;
   // grid-row: 2;
   grid-column: 12;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 1;
     grid-column: 6;
   }
@@ -149,7 +149,7 @@ const Cell7 = styled.div`
   display: grid;
   // grid-row: 2;
   grid-column: 13;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 1;
     grid-column: 7;
   }
@@ -159,7 +159,7 @@ const Cell8 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 4;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 2;
     grid-column: 1;
   }
@@ -169,7 +169,7 @@ const Cell9 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 5;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 2;
     grid-column: 2;
   }
@@ -179,7 +179,7 @@ const Cell10 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 6;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 2;
     grid-column: 3;
   }
@@ -188,7 +188,7 @@ const Cell11 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 8;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 2;
     grid-column: 5;
   }
@@ -198,7 +198,7 @@ const Cell12 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 9;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 2;
     grid-column: 6;
   }
@@ -208,7 +208,7 @@ const Cell13 = styled.div`
   display: grid;
   grid-row: 1;
   grid-column: 10;
-  @media (max-width: 1620px) {
+  @media (max-width: 1400px) {
     grid-row: 2;
     grid-column: 7;
   }
