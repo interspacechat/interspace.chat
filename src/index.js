@@ -23,7 +23,7 @@ ReactDOM.render(
           margin: 0px;
           padding: 0px;
           font-family: 'Roboto Mono', monospace;
-          font-weight: 300;
+          font-weight: 600;
           font-size: 14px;
         }
         body {

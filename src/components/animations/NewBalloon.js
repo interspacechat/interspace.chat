@@ -1,9 +1,27 @@
 import * as React from 'react'
 
 function SvgImagemap (props) {
+  const ballooncolor = props.color
   return (
-    <svg width={60} height={213} xmlns='http://www.w3.org/2000/svg' {...props}>
-      <svg x={100} {...props}>
+    <svg width={120} height={300} xmlns='http://www.w3.org/2000/svg' {...props}>
+      <defs>
+        <radialGradient
+          id='balloon_shine'
+          cx='0.5'
+          cy='0.5'
+          fx='0.25'
+          fy='0.25'
+          spreadMethod='pad'
+        >
+          <stop offset='0%' stop-color='white' stop-opacity='0.5' />
+          <stop offset='70%' stop-color='white' stop-opacity='0' />
+          <stop offset='100%' stop-color='black' stop-opacity='0.1' />
+        </radialGradient>
+        <filter id='shadow'>
+          <feDropShadow dx='0.2' dy='0.4' stdDeviation='0.2' />
+        </filter>
+      </defs>
+      <svg x={0} {...props}>
         <g id='imagemap_svg__blue_balloon'>
           <path d='M60 10c10 10-20 90 0 100' fill='transparent' stroke='gray'>
             <animate
@@ -17,7 +35,7 @@ function SvgImagemap (props) {
           </path>
           <path
             d='M60 85l5 10H55z'
-            fill='#87a8bc'
+            fill={ballooncolor}
             stroke='transparent'
             opacity={0.9}
           >
@@ -36,7 +54,7 @@ function SvgImagemap (props) {
             rx={30}
             ry={40}
             stroke='transparent'
-            fill='#b6e4ff'
+            fill={ballooncolor}
             opacity={0.9}
           >
             <animate
@@ -54,7 +72,7 @@ function SvgImagemap (props) {
             rx={30}
             ry={40}
             stroke='transparent'
-            fill='url(#imagemap_svg__balloon_shine)'
+            fill='url(#balloon_shine)'
           >
             <animate
               attributeType='XML'

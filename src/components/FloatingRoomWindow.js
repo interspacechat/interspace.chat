@@ -7,17 +7,18 @@ import { FloatingSpaceContext } from '../contexts/FloatingSpaceContext'
 
 import { RoomNames } from '../utils/constants'
 import RoomInstance from './RoomInstance'
+import CryptovoxelsInstance from './integrations/CryptovoxelsInstance'
+import LoftRadioInstance from './integrations/LoftRadioInstance'
 import TypeformInstance from './integrations/TypeformInstance'
 import YoutubeInstance from './integrations/YoutubeInstance'
 import ChatInstance from './integrations/ChatInstance'
 import CalendarInstance from './integrations/CalendarInstance'
-import CryptovoxelsInstance from './integrations/CryptovoxelsInstance'
-import LoftRadioInstance from './integrations/LoftRadioInstance'
 import AboutInstance from './external-sites/AboutInstance'
 import BountiesInstance from './external-sites/BountiesInstance'
 import SovrynInstance from './external-sites/SovrynInstance'
 import PartnersInstance from './integrations/PartnersInstance'
 import OpenseaInstance from './external-sites/OpenseaInstance'
+import SponsorshipInstance from './SponsorshipInstance'
 
 const width = window.innerWidth / 2
 const height = window.innerHeight / 2
@@ -90,8 +91,8 @@ function getFloatingRoomWindow (windowKey) {
     return <AboutInstance />
   } else if (windowKey === 'Chat') {
     return <ChatInstance />
-  } else if (windowKey === 'Bounties') {
-    return <BountiesInstance />
+  } else if (windowKey === 'Sponsorships') {
+    return <SponsorshipInstance />
   } else if (windowKey === 'Sovryn') {
     return <SovrynInstance />
   } else if (windowKey === 'stream1') {
@@ -225,7 +226,7 @@ function FloatingRoomWindow () {
       bgColor = '#b30602DD'
     } else if (windowKey === 'Status Chat' || windowKey === 'OpenSea') {
       bgColor = '#082d75DD'
-    } else if (windowKey === 'Schedule') {
+    } else if (windowKey === 'Schedule' || windowKey === 'Sponsorships') {
       bgColor = '#E6E6E6DD'
     } else {
       bgColor = '#dab544DD'
