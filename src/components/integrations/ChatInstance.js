@@ -22,7 +22,8 @@ function ChatInstance () {
         width: '100%',
         height: '95%',
         position: 'relative',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        margin: '0 auto'
       }}
       id='status-chat-widget'
     ></div>
