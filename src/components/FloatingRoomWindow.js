@@ -257,6 +257,8 @@ function FloatingRoomWindow () {
       windowKey === 'About'
     ) {
       windowHeight = height * 1.8
+    } else if (windowKey === 'Status Chat') {
+      windowHeight = height + 20
     } else {
       windowHeight = height - 20
     }
