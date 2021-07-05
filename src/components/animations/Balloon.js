@@ -2,7 +2,6 @@ import React from 'react'
 
 import SvgImagemap from './NewBalloon'
 
-
 const Balloon = props => {
   const { color, width, height } = props
 
@@ -11,7 +10,7 @@ const Balloon = props => {
     width: `${width}`
   }
 
-  return <SvgImagemap color={color} />
+  return <SvgImagemap color={color} style={style} />
 }
 
 export default Balloon

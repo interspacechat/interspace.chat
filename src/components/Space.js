@@ -75,7 +75,7 @@ const ImagemapContainer = styled.div`
 const ImagemapContainerMobile = styled.div`
   display: grid;
   place-items: center;
-  min-height: 80vh;
+  height: 80vh;
 `
 
 const Headline = styled.h6`
@@ -116,7 +116,6 @@ const SpaceInfo = styled.div`
 `
 
 const Descripton = styled.div`
-  z-index: 111;
   margin: 0px;
   font-size: 0.8rem;
   padding-bottom: 0.4rem;
@@ -159,6 +158,14 @@ const ShowSection = () => {
     isHidden ? toggleHidden(false) : toggleHidden(true)
   }
 
+  const ShowSectionContainer = styled.div`
+    position: absolute;
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+  `
+
   const ButtonContainer = styled.div`
     position: absolute;
     background-color: ${props => props.theme.background};
@@ -170,10 +177,9 @@ const ShowSection = () => {
     justify-content: end;
   `
   const CloseButton = styled.button`
-    background: unset;
     border: 1px solid ${props => props.theme.highlight};
     border-radius: 100px;
-    color: ${props => props.theme.highlight};
+    background-color: ${props => props.theme.background};
     font-size: 2rem;
     font-weight: 100;
     padding: 1rem;
@@ -184,18 +190,23 @@ const ShowSection = () => {
     }
   `
   return (
-    <div>
+    <>
       {isHidden ? null : (
-        <ButtonContainer>
-          {isHidden ? null : <Element />}
-          <CloseButton onClick={onClick}>
-            {isHidden ? '' : 'Close this message'}
-          </CloseButton>
-        </ButtonContainer>
+        <ShowSectionContainer>
+          {isHidden ? null : (
+            <ButtonContainer>
+              {isHidden ? null : <Element />}
+              <CloseButton onClick={onClick}>
+                {isHidden ? '' : 'Close this message'}
+              </CloseButton>
+            </ButtonContainer>
+          )}
+        </ShowSectionContainer>
       )}
-    </div>
+    </>
   )
 }
+
 const Element = () => (
   <Descripton>
     <p>
@@ -285,8 +296,6 @@ const Space = () => {
             */}
       </BrowserView>
       <MobileView>
-        <ShowSection />
-
         <SponsorContainer2
           className='click-zone'
           onClick={() => openInNewTab('/')}
@@ -298,11 +307,14 @@ const Space = () => {
             alt='ethcc4'
             style={{ padding: '1rem' }}
           />
-          <h1>
+          <h3>
             EthCC<span>[4]</span> - July 20-22, 2021
-          </h1>
+          </h3>
         </SponsorContainer2>
-        <EthCCMobile />
+        <ShowSection />
+        <ImagemapContainerMobile>
+          <EthCCMobile />
+        </ImagemapContainerMobile>
       </MobileView>
     </SpaceSelector>
   )

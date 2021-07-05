@@ -19,6 +19,7 @@ import TwitterInstance from './integrations/TwitterInstance'
 import PartnersInstance from './integrations/PartnersInstance'
 import OpenseaInstance from './external-sites/OpenseaInstance'
 import SponsorshipInstance from './SponsorshipInstance'
+import { useState } from 'react/cjs/react.production.min'
 
 const width = window.innerWidth / 2
 const height = window.innerHeight / 2
@@ -126,8 +127,6 @@ function FloatingRoomWindow () {
     FloatingSpaceContext
   )
 
-  const space = currentFloatingSpaces
-
   const [zIndexes, setZIndexes] = useReducer(zIndexesReducer, {})
   const maxZ = Object.values(zIndexes).reduce((acc, el) => Math.max(acc, el), 1)
 
@@ -138,7 +137,7 @@ function FloatingRoomWindow () {
         setZIndexes({ key: space, value: ++tempMax })
       }
     })
-  }, [currentFloatingSpaces])
+  }, [currentFloatingSpaces, maxZ, zIndexes])
 
   function setWindowFocus (windowKey) {
     setZIndexes({ key: windowKey, value: maxZ + 1 })
@@ -146,26 +145,22 @@ function FloatingRoomWindow () {
 
   const setStartingCoordinatesX = windowKey => {
     let windowOriginX = 20
-    if (windowKey === 'Status Chat') {
+    if (windowKey === 'Twitter') {
       windowOriginX = width
-    } else if (windowKey === 'claim poap token') {
-      windowOriginX = width / 2
-    } else if (windowKey === 'Schedule') {
-      windowOriginX = width / 2
-    } else if (windowKey === 'stream1' || windowKey === 'livepeer') {
-      windowOriginX = 20
     } else if (
-      windowKey === 'OpenSea' ||
-      windowKey === 'credits' ||
-      windowKey === 'Sign Up'
+      windowKey === 'Schedule' ||
+      windowKey === 'claim poap token' ||
+      windowKey === 'Status Chat'
     ) {
+      windowOriginX = width / 2
+    } else if (windowKey === 'stream1') {
+      windowOriginX = 40
+    } else if (windowKey === 'OpenSea' || windowKey === 'Sponsorships') {
+      windowOriginX = width / 5
+    } else if (windowKey === 'credits' || windowKey === 'Sign Up') {
       windowOriginX = width / 4
-    } else if (
-      windowKey === 'About' ||
-      windowKey === 'loft.radio' ||
-      windowKey === 'claim poap token'
-    ) {
-      windowOriginX = width / 2
+    } else if (windowKey === 'About' || windowKey === 'claim poap token') {
+      windowOriginX = width / 3
     } else if (
       windowKey === 'stream4' ||
       windowKey === 'stream5' ||
@@ -182,25 +177,23 @@ function FloatingRoomWindow () {
     if (
       windowKey === 'stream2' ||
       windowKey === 'stream5' ||
-      windowKey === 'About' ||
-      windowKey === 'Status Chat'
+      windowKey === 'Status Chat' ||
+      windowKey === 'Twitter' ||
+      windowKey === 'Auction'
     ) {
       windowOriginY = height / 2
-    } else if (windowKey === 'stream1' || windowKey === 'stream4') {
+    } else if (windowKey === 'stream1' || windowKey === 'stream6') {
       windowOriginY = 20
     } else if (windowKey === 'Schedule') {
       windowOriginY = 30
-    } else if (
-      windowKey === 'stream3' ||
-      windowKey === 'OpenSea' ||
-      windowKey === 'stream6'
-    ) {
+    } else if (windowKey === 'stream3' || windowKey === 'stream4') {
       windowOriginY = height + 10
+    } else if (windowKey === 'Twitter') {
+      windowOriginY = height / 2
     } else if (
-      windowKey === 'help' ||
-      windowKey === 'new room' ||
+      windowKey === 'OpenSea' ||
       windowKey === 'livestream' ||
-      windowKey === 'loft.radio' ||
+      windowKey === 'Sponsorships' ||
       windowKey === 'claim poap token'
     ) {
       windowOriginY = height / 2 - 70
@@ -211,7 +204,7 @@ function FloatingRoomWindow () {
   }
 
   const setFloatingwindowColor = windowKey => {
-    let bgColor = '#dab544DD'
+    let bgColor = '#082d75DD'
 
     if (windowKey === 'Partners' || windowKey === 'Workshops') {
       bgColor = '#C1B7A3DD'
@@ -229,19 +222,16 @@ function FloatingRoomWindow () {
     } else if (windowKey === 'Schedule' || windowKey === 'Sponsorships') {
       bgColor = '#E6E6E6DD'
     } else {
-      bgColor = '#dab544DD'
+      bgColor = '#082d75DD'
     }
     return bgColor
   }
 
   const setStartingWidth = windowKey => {
     let windowWidth = width - 20
-    if (
-      windowKey === 'VHackathon Solidity Summit' ||
-      windowKey === 'Status Chat'
-    ) {
+    if (windowKey === 'Status Chat') {
       windowWidth = width / 1.3
-    } else if (windowKey === 'Partners') {
+    } else if (windowKey === 'Sponsorships' || windowKey === 'OpenSea') {
       windowWidth = width * 1.6
     } else {
       windowWidth = width - 20
@@ -251,12 +241,10 @@ function FloatingRoomWindow () {
 
   const setStartingHeight = windowKey => {
     let windowHeight = height - 20
-    if (
-      windowKey === 'Partners' ||
-      windowKey === 'Schedule' ||
-      windowKey === 'About'
-    ) {
+    if (windowKey === 'Schedule') {
       windowHeight = height * 1.8
+    } else if (windowKey === 'Sponsorships' || windowKey === 'OpenSea') {
+      windowHeight = height * 1.3
     } else if (windowKey === 'Status Chat') {
       windowHeight = height + 20
     } else {

@@ -249,7 +249,7 @@ const EthCC = () => {
   }
 
   const notYet = () => {
-    alert('Live on July 12th')
+    alert('Live on July 20th')
   }
 
   const poap = () => {
@@ -335,7 +335,7 @@ const EthCC = () => {
           </h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell8>
-        <Cell9 onClick={() => poap()}>
+        <Cell9 onClick={() => notYet()}>
           <h1 className='title bleu'>
             POAP
             <br />{' '}

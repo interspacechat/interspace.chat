@@ -16,6 +16,7 @@ import AboutInstance from './components/external-sites/AboutInstance'
 import YoutubeInstance from './components/integrations/YoutubeInstance'
 import ChatInstance from './components/integrations/ChatInstance'
 import CalendarInstance from './components/integrations/CalendarInstance'
+import SponsorshipInstance from './components/SponsorshipInstance'
 
 const Wrapper = styled('div')`
   color: ${props => props.theme.body};
@@ -37,7 +38,11 @@ function App () {
             <Switch>
               <Route path='/' exact component={Space} />
               <Route path='/about' exact component={AboutInstance} />
-              <Route path='/partners' exact component={PartnersInstance} />
+              <Route
+                path='/sponsorships'
+                exact
+                component={SponsorshipInstance}
+              />
               <Route path='/partner-deck' component={Partnerdeck} />
               <Route path='/schedule' exact component={CalendarInstance} />
               <Route path='/chat' exact component={ChatInstance} />
