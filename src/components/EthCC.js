@@ -16,6 +16,7 @@ const Grid = styled.div`
   justify-items: center;
   margin: 0 auto;
   max-width: 1200px;
+  max-height: 0.8fr;
   @media (max-width: 1400px) {
     grid-template-columns: repeat(7, 1fr);
   }
@@ -274,7 +275,7 @@ const EthCC = () => {
           <h1 className='title bleu'>POAP</h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell9>
-        <Cell10 onClick={() => openInNewTab('https://twitter.com/ethcc')}>
+        <Cell10 onClick={() => addFloatingSpace('Twitter')}>
           <h1 className='title bleu'>Twitter</h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell10>

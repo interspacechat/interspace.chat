@@ -15,7 +15,7 @@ import ChatInstance from './integrations/ChatInstance'
 import CalendarInstance from './integrations/CalendarInstance'
 import AboutInstance from './external-sites/AboutInstance'
 import BountiesInstance from './external-sites/BountiesInstance'
-import SovrynInstance from './external-sites/SovrynInstance'
+import TwitterInstance from './integrations/TwitterInstance'
 import PartnersInstance from './integrations/PartnersInstance'
 import OpenseaInstance from './external-sites/OpenseaInstance'
 import SponsorshipInstance from './SponsorshipInstance'
@@ -93,8 +93,8 @@ function getFloatingRoomWindow (windowKey) {
     return <ChatInstance />
   } else if (windowKey === 'Sponsorships') {
     return <SponsorshipInstance />
-  } else if (windowKey === 'Sovryn') {
-    return <SovrynInstance />
+  } else if (windowKey === 'Twitter') {
+    return <TwitterInstance />
   } else if (windowKey === 'stream1') {
     return <YoutubeInstance />
   } else if (windowKey === 'stream2') {
@@ -146,7 +146,7 @@ function FloatingRoomWindow () {
 
   const setStartingCoordinatesX = windowKey => {
     let windowOriginX = 20
-    if (windowKey === 'discord chat') {
+    if (windowKey === 'Status Chat') {
       windowOriginX = width
     } else if (windowKey === 'claim poap token') {
       windowOriginX = width / 2
@@ -236,7 +236,10 @@ function FloatingRoomWindow () {
 
   const setStartingWidth = windowKey => {
     let windowWidth = width - 20
-    if (windowKey === 'VHackathon Solidity Summit') {
+    if (
+      windowKey === 'VHackathon Solidity Summit' ||
+      windowKey === 'Status Chat'
+    ) {
       windowWidth = width / 1.3
     } else if (windowKey === 'Partners') {
       windowWidth = width * 1.6

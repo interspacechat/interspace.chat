@@ -22,7 +22,7 @@ const SponsorContainer2 = styled.div`
     font-size: 2rem;
     padding: 1rem;
     :hover {
-      filter: drop-shadow(0px 0px 5px #ffffff);
+      filter: drop-shadow(0px 0px 5px #000);
     }
   }
 
@@ -263,7 +263,9 @@ const Space = () => {
             EthCC<span>[4]</span> - July 20-22, 2021
           </h1>
         </SponsorContainer2>
-        <EthCC />
+
+        <EthCC style={{ paddingTop: '3rem' }} />
+
         {/**
          <Header>
           <SpaceInfo>
