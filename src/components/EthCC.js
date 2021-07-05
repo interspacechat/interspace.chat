@@ -75,34 +75,46 @@ const Grid = styled.div`
 
 const Cell1 = styled.div`
   //transform: scale(1.5);
-  transform: translateY(0px);
+  transform: translateY(-80px) translateX(-80px);
   display: grid;
   grid-row: 2;
   grid-column: 1;
+  .title {
+    transform: translateY(70px);
+  }
 `
 
 const Cell2 = styled.div`
   // transform: scale(1.5) translate(-100px, 0px);
-  transform: translateY(50px);
+  transform: translateY(0px) translateX(-80px);
   display: grid;
   grid-row: 2;
   grid-column: 2;
+  .title {
+    transform: translateY(70px);
+  }
 `
 
 const Cell3 = styled.div`
   // transform: scale(1.5);
-  transform: translateY(90px);
+  transform: translateY(80px) translateX(-80px);
   display: grid;
   grid-row: 2;
   grid-column: 3;
+  .title {
+    transform: translateY(70px);
+  }
 `
 
 const Cell4 = styled.div`
   // transform: scale(1.5);
-  transform: translateY(90px);
+  transform: translateY(80px) translateX(80px);
   display: grid;
   grid-row: 2;
   grid-column: 5;
+  .title {
+    transform: translateY(70px);
+  }
 `
 
 const Cell5 = styled.div`
@@ -113,12 +125,12 @@ const Cell5 = styled.div`
 
   .portal {
     // position: absolute;
-    // transform: translateY(0px);
-    max-height: 350px;
-    max-width: 145px;
+    transform: scale(1.2);
+    max-height: 400px;
+    max-width: 170px;
   }
   .title {
-    transform: translateY(10px);
+    transform: translateY(40px);
     font-size: 1.5rem;
     color: black;
     margin: 0 auto;
@@ -129,59 +141,83 @@ const Cell5 = styled.div`
 `
 const Cell6 = styled.div`
   // transform: scale(1.5) translate(100px, 0px);
-  transform: translateY(50px);
+  transform: translateY(0px) translateX(80px);
   display: grid;
   grid-row: 2;
   grid-column: 6;
+  .title {
+    transform: translateY(70px);
+  }
 `
 
 const Cell7 = styled.div`
   // transform: scale(1.5);
-  transform: translateY(0px);
+  transform: translateY(-80px) translateX(80px);
   display: grid;
   grid-row: 2;
   grid-column: 7;
+  .title {
+    transform: translateY(70px);
+  }
 `
 
 const Cell8 = styled.div`
-  transform: translateY(-0px);
+  transform: translateY(-0px) translateX(0px);
   display: grid;
   grid-row: 1;
   grid-column: 1;
+  .title {
+    transform: translateY(70px);
+  }
 `
 
 const Cell9 = styled.div`
-  transform: translateY(-50px);
+  transform: translateY(-50px) translateX(0px);
   display: grid;
   grid-row: 1;
   grid-column: 2;
+  .title {
+    transform: translateY(60px);
+  }
 `
 
 const Cell10 = styled.div`
-  transform: translateY(-90px);
+  transform: translateY(-90px) translateX(0px);
   display: grid;
   grid-row: 1;
   grid-column: 3;
+  .title {
+    transform: translateY(60px);
+  }
 `
 const Cell11 = styled.div`
-  transform: translateY(-90px);
+  transform: translateY(-90px) translateX(0px);
   display: grid;
   grid-row: 1;
   grid-column: 5;
+  .title {
+    transform: translateY(60px);
+  }
 `
 
 const Cell12 = styled.div`
-  transform: translateY(-50px);
+  transform: translateY(-50px) translateX(0px);
   display: grid;
   grid-row: 1;
   grid-column: 6;
+  .title {
+    transform: translateY(60px);
+  }
 `
 
 const Cell13 = styled.div`
-  transform: translateY(-0px);
+  transform: translateY(-0px) translateX(0px);
   display: grid;
   grid-row: 1;
   grid-column: 7;
+  .title {
+    transform: translateY(60px);
+  }
 `
 
 const BottomLinks = styled.span`
@@ -244,51 +280,94 @@ const EthCC = () => {
           </h1>
         </Cell5>
         <Cell1 onClick={() => addFloatingSpace('stream1')}>
-          <h1 className='title'>STREAM_1</h1>
+          <h1 className='title'>
+            STREAM
+            <br />
+            One
+          </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell1>
         <Cell2 onClick={() => addFloatingSpace('stream2')}>
-          <h1 className='title'>STREAM_2</h1>
+          <h1 className='title'>
+            STREAM
+            <br />
+            Two
+          </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell2>
         <Cell3 onClick={() => addFloatingSpace('stream3')}>
-          <h1 className='title'>STREAM_3</h1>
+          <h1 className='title'>
+            STREAM
+            <br />
+            Three
+          </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell3>
         <Cell4 onClick={() => addFloatingSpace('stream4')}>
-          <h1 className='title'>STREAM_4</h1>
+          <h1 className='title'>
+            STREAM
+            <br />
+            Four
+          </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell4>
         <Cell6 onClick={() => addFloatingSpace('stream5')}>
-          <h1 className='title'>STREAM_5</h1>
+          <h1 className='title'>
+            STREAM
+            <br />
+            Five
+          </h1>
           <Balloon className='portal' color={'#082d75'} />
         </Cell6>
         <Cell7 onClick={() => addFloatingSpace('stream6')}>
-          <h1 className='title'>STREAM_6</h1>
+          <h1 className='title'>
+            STREAM
+            <br />
+            Six
+          </h1>
           <Balloon className='portal' color={'#082d75'} />
         </Cell7>
         <Cell8 onClick={() => addFloatingSpace('Status Chat')}>
-          <h1 className='title bleu'>Chat</h1>
+          <h1 className='title bleu'>
+            Status
+            <br />
+            Chat
+          </h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell8>
         <Cell9 onClick={() => poap()}>
-          <h1 className='title bleu'>POAP</h1>
+          <h1 className='title bleu'>
+            POAP
+            <br />{' '}
+          </h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell9>
         <Cell10 onClick={() => addFloatingSpace('Twitter')}>
-          <h1 className='title bleu'>Twitter</h1>
+          <h1 className='title bleu'>
+            Twitter
+            <br />{' '}
+          </h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell10>
         <Cell11 onClick={() => addFloatingSpace('OpenSea')}>
-          <h1 className='title bleu'>Auction</h1>
+          <h1 className='title bleu'>
+            Auction
+            <br />{' '}
+          </h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell11>
         <Cell12 onClick={() => addFloatingSpace('Sponsorships')}>
-          <h1 className='title bleu'>Sponsors</h1>
+          <h1 className='title bleu'>
+            Sponsors
+            <br />{' '}
+          </h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell12>
         <Cell13 onClick={() => addFloatingSpace('Schedule')}>
-          <h1 className='title bleu'>Schedule</h1>
+          <h1 className='title bleu'>
+            Schedule
+            <br />{' '}
+          </h1>
           <Balloon className='portal' color={'#b30602'} />
         </Cell13>
       </Grid>
