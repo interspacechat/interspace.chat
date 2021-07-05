@@ -2,6 +2,7 @@ import * as React from 'react'
 
 function SvgImagemap (props) {
   const ballooncolor = props.color
+  const randomDuration = 2 + Math.random() * 4
   return (
     <svg width={80} height={300} xmlns='http://www.w3.org/2000/svg' {...props}>
       <defs>
@@ -29,7 +30,7 @@ function SvgImagemap (props) {
               attributeName='d'
               values='M40 86 c0 10 -10 90 0 131; M40 91 c0 10 3 90 0 136; M40 93 c0 10 10 90 0 138; M40 91 c0 10 -3 90 0 136; M40 86 c0 10 -10 90 0 131'
               keyTimes='0; 0.25; 0.5; 0.75; 1'
-              dur='5s'
+              dur={5 + Math.random() * 10}
               repeatCount='indefinite'
             />
           </path>
@@ -44,7 +45,7 @@ function SvgImagemap (props) {
               attributeName='d'
               values='M40 86 l3 10 l-6 0 z; M40 91 l3 10 l-6 0 z; M40 93 l3 10 l-6 0 z; M40 91 l3 10 l-6 0 z; M40 86 l3 10 l-6 0 z'
               keyTimes='0;0.25;0.5;0.75;1'
-              dur='2.5s'
+              dur={randomDuration}
               repeatCount='indefinite'
             />
           </path>
@@ -62,7 +63,7 @@ function SvgImagemap (props) {
               attributeName='cy'
               values='50;55;57;55;50'
               keyTimes='0;0.25;0.5;0.75;1'
-              dur='2.5s'
+              dur={randomDuration}
               repeatCount='indefinite'
             />
           </ellipse>
@@ -79,7 +80,7 @@ function SvgImagemap (props) {
               attributeName='cy'
               values='50;55;57;55;50'
               keyTimes='0;0.25;0.5;0.75;1'
-              dur='2.5s'
+              dur={randomDuration}
               repeatCount='indefinite'
             />
           </ellipse>
