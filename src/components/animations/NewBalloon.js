@@ -13,9 +13,9 @@ function SvgImagemap (props) {
           fy='0.25'
           spreadMethod='pad'
         >
-          <stop offset='0%' stop-color='white' stop-opacity='0.5' />
-          <stop offset='70%' stop-color='white' stop-opacity='0' />
-          <stop offset='100%' stop-color='black' stop-opacity='0.1' />
+          <stop offset='0%' stopColor='white' stopOpacity='0.5' />
+          <stop offset='70%' stopColor='white' stopOpacity='0' />
+          <stop offset='100%' stopColor='black' stopOpacity='0.1' />
         </radialGradient>
         <filter id='shadow'>
           <feDropShadow dx='0.2' dy='0.4' stdDeviation='0.2' />
