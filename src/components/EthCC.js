@@ -11,9 +11,11 @@ const ImagemapContainer = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(1, auto);
   justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
   @media (max-width: 1400px) {
     grid-template-columns: repeat(7, 1fr);
   }
@@ -25,7 +27,7 @@ const Grid = styled.div`
     border: 2px solid #ffffff00;
     max-height: 300px;
     max-width: 80px;
-    align-self: center6;
+    align-self: center;
     color: #e6e6e6;
     h1 {
       text-align: center;
@@ -72,52 +74,47 @@ const Grid = styled.div`
 
 const Cell1 = styled.div`
   //transform: scale(1.5);
+  transform: translateY(50px);
   display: grid;
-  // grid-row: 2;
+  grid-row: 3;
   grid-column: 1;
 `
 
 const Cell2 = styled.div`
   // transform: scale(1.5) translate(-100px, 0px);
+  transform: translateY(90px);
   display: grid;
-  // grid-row: 2;
+  grid-row: 3;
   grid-column: 2;
 `
 
 const Cell3 = styled.div`
   // transform: scale(1.5);
+  transform: translateY(130px);
   display: grid;
-  // grid-row: 2;
+  grid-row: 3;
   grid-column: 3;
 `
 
 const Cell4 = styled.div`
   // transform: scale(1.5);
+  transform: translateY(130px);
   display: grid;
-  // grid-row: 2;
-  grid-column: 11;
-  @media (max-width: 1400px) {
-    grid-row: 1;
-    grid-column: 5;
-  }
+  grid-row: 3;
+  grid-column: 5;
 `
 
 const Cell5 = styled.div`
   display: grid;
-  flex-direction: column;
+  grid-row: 1 / span 3;
+  grid-column: 4;
   place-content: center;
-  height: auto;
-  width: auto;
-  grid-row: 1;
-  grid-column: 7;
+
   .portal {
     // position: absolute;
     // transform: translateY(0px);
-    max-height: 300px;
-    max-width: 120px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+    max-height: 350px;
+    max-width: 145px;
   }
   .title {
     transform: translateY(10px);
@@ -128,91 +125,62 @@ const Cell5 = styled.div`
   &:hover .title {
     opacity: 1;
   }
-  @media (max-width: 1400px) {
-    grid-row: 1 / span 2;
-    grid-column: 4;
-    margin: auto auto;
-  }
 `
 const Cell6 = styled.div`
   // transform: scale(1.5) translate(100px, 0px);
+  transform: translateY(90px);
   display: grid;
-  // grid-row: 2;
-  grid-column: 12;
-  @media (max-width: 1400px) {
-    grid-row: 1;
-    grid-column: 6;
-  }
+  grid-row: 3;
+  grid-column: 6;
 `
 
 const Cell7 = styled.div`
   // transform: scale(1.5);
+  transform: translateY(50px);
   display: grid;
-  // grid-row: 2;
-  grid-column: 13;
-  @media (max-width: 1400px) {
-    grid-row: 1;
-    grid-column: 7;
-  }
+  grid-row: 3;
+  grid-column: 7;
 `
 
 const Cell8 = styled.div`
+  transform: translateY(-50px);
   display: grid;
   grid-row: 1;
-  grid-column: 4;
-  @media (max-width: 1400px) {
-    grid-row: 2;
-    grid-column: 1;
-  }
+  grid-column: 1;
 `
 
 const Cell9 = styled.div`
+  transform: translateY(-90px);
   display: grid;
   grid-row: 1;
-  grid-column: 5;
-  @media (max-width: 1400px) {
-    grid-row: 2;
-    grid-column: 2;
-  }
+  grid-column: 2;
 `
 
 const Cell10 = styled.div`
+  transform: translateY(-130px);
   display: grid;
   grid-row: 1;
-  grid-column: 6;
-  @media (max-width: 1400px) {
-    grid-row: 2;
-    grid-column: 3;
-  }
+  grid-column: 3;
 `
 const Cell11 = styled.div`
+  transform: translateY(-130px);
   display: grid;
   grid-row: 1;
-  grid-column: 8;
-  @media (max-width: 1400px) {
-    grid-row: 2;
-    grid-column: 5;
-  }
+  grid-column: 5;
 `
 
 const Cell12 = styled.div`
+  transform: translateY(-90px);
   display: grid;
   grid-row: 1;
-  grid-column: 9;
-  @media (max-width: 1400px) {
-    grid-row: 2;
-    grid-column: 6;
-  }
+  grid-column: 6;
 `
 
 const Cell13 = styled.div`
+  transform: translateY(-50px);
   display: grid;
   grid-row: 1;
-  grid-column: 10;
-  @media (max-width: 1400px) {
-    grid-row: 2;
-    grid-column: 7;
-  }
+  grid-column: 7;
 `
 
 const BottomLinks = styled.span`
