@@ -19,6 +19,7 @@ function ChatInstance () {
   return (
     <div
       style={{
+        maxWidth: '100%',
         width: '100%',
         height: '95%',
         position: 'relative',
