@@ -51,16 +51,17 @@ import InterspaceLogo from '../img/sovrython/Interspacechat-logo.svg'
 
 const SponsorContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 90%;
   // background-color: #b30602;
-  background-color: #ffffff;
-  display: flex;
+  display: block;
+  overflow-y: auto;
   flex-direction: column;
   justify-content: center;
 `
 
 const PoweredByGold = styled.div`
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   grid-template-columns: repeat(2, auto);
   margin: 0 auto;
@@ -76,7 +77,8 @@ const PoweredByGold = styled.div`
 `
 
 const PoweredBySilver = styled.div`
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   grid-template-columns: repeat(6, auto);
   margin: 0 auto;
@@ -93,7 +95,8 @@ const PoweredBySilver = styled.div`
 `
 
 const PoweredByBronze = styled.div`
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   grid-template-columns: repeat(7, auto);
   margin: 0 auto;
@@ -110,9 +113,10 @@ const PoweredByBronze = styled.div`
 `
 
 const PoweredByIron = styled.div`
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
   align-items: center;
   padding: 1rem;
