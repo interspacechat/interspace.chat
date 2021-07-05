@@ -89,7 +89,7 @@ function getFloatingRoomWindow (windowKey) {
     return <OpenseaInstance />
   } else if (windowKey === 'About') {
     return <AboutInstance />
-  } else if (windowKey === 'Chat') {
+  } else if (windowKey === 'Status Chat') {
     return <ChatInstance />
   } else if (windowKey === 'Sponsorships') {
     return <SponsorshipInstance />
