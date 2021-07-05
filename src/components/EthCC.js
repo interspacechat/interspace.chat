@@ -75,39 +75,39 @@ const Grid = styled.div`
 
 const Cell1 = styled.div`
   //transform: scale(1.5);
-  transform: translateY(50px);
+  transform: translateY(0px);
   display: grid;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 1;
 `
 
 const Cell2 = styled.div`
   // transform: scale(1.5) translate(-100px, 0px);
-  transform: translateY(90px);
+  transform: translateY(50px);
   display: grid;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 2;
 `
 
 const Cell3 = styled.div`
   // transform: scale(1.5);
-  transform: translateY(130px);
+  transform: translateY(90px);
   display: grid;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 3;
 `
 
 const Cell4 = styled.div`
   // transform: scale(1.5);
-  transform: translateY(130px);
+  transform: translateY(90px);
   display: grid;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 5;
 `
 
 const Cell5 = styled.div`
   display: grid;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 2;
   grid-column: 4;
   place-content: center;
 
@@ -129,56 +129,56 @@ const Cell5 = styled.div`
 `
 const Cell6 = styled.div`
   // transform: scale(1.5) translate(100px, 0px);
-  transform: translateY(90px);
+  transform: translateY(50px);
   display: grid;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 6;
 `
 
 const Cell7 = styled.div`
   // transform: scale(1.5);
-  transform: translateY(50px);
+  transform: translateY(0px);
   display: grid;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 7;
 `
 
 const Cell8 = styled.div`
-  transform: translateY(-50px);
+  transform: translateY(-0px);
   display: grid;
   grid-row: 1;
   grid-column: 1;
 `
 
 const Cell9 = styled.div`
-  transform: translateY(-90px);
+  transform: translateY(-50px);
   display: grid;
   grid-row: 1;
   grid-column: 2;
 `
 
 const Cell10 = styled.div`
-  transform: translateY(-130px);
+  transform: translateY(-90px);
   display: grid;
   grid-row: 1;
   grid-column: 3;
 `
 const Cell11 = styled.div`
-  transform: translateY(-130px);
+  transform: translateY(-90px);
   display: grid;
   grid-row: 1;
   grid-column: 5;
 `
 
 const Cell12 = styled.div`
-  transform: translateY(-90px);
+  transform: translateY(-50px);
   display: grid;
   grid-row: 1;
   grid-column: 6;
 `
 
 const Cell13 = styled.div`
-  transform: translateY(-50px);
+  transform: translateY(-0px);
   display: grid;
   grid-row: 1;
   grid-column: 7;
