@@ -41,7 +41,7 @@ const Grid = styled.div`
       svg {
         // border: 2px solid #b30602aa;
         // transform: scale(1.2);
-        filter: drop-shadow(5px 5px 5px gray);
+        filter: drop-shadow(1px 1px 4px gray);
       }
       h1 {
         color: #b30602;
