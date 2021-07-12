@@ -27,13 +27,14 @@ function CalendarInstance () {
     <InstanceContainer>
       <iframe
         title='Schedule'
-        src={`https://calendar.google.com/calendar/embed?src=mndjqf9dhc3ski784qloec28e4%40group.calendar.google.com&ctz=${timezone}`}
-        height='80%'
+        src={`https://ethcc.io/agenda`}
+        height='100%'
         width='100%'
         style={{
           border: '0px'
         }}
       />
+      {/**
       <p
         style={{
           textAlign: 'center',
@@ -63,6 +64,7 @@ function CalendarInstance () {
           borderRadius: '1rem'
         }}
       />
+      */}
     </InstanceContainer>
   )
 }
