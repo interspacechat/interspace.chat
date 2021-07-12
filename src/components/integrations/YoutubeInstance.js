@@ -19,7 +19,7 @@ function YoutubeInstance ({ roomData }) {
       title='Youtube Livestream'
       width='100%'
       height='100%'
-      src={`https://www.youtube-nocookie.com/embed/1hsSQwZhMk8`}
+      src={`https://www.youtube-nocookie.com/embed/videoseries?list=PLrtFm7U0BIfWvoJy8DrspnI-6lMb64V7f`}
       frameBorder='0'
       allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
       allowFullScreen
