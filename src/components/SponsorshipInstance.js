@@ -47,16 +47,16 @@ import QuantstampLogo from '../img/ethcc-sponsors/iron/quantstamp.png'
 import StarkwareLogo from '../img/ethcc-sponsors/iron/starkware.svg'
 import ThegraphLogo from '../img/ethcc-sponsors/iron/thegraph.png'
 import ParalleleLogo from '../img/parallele-black.png'
-import InterspaceLogo from '../img/sovrython/Interspacechat-logo.svg'
+import InterspaceLogo from '../img/ethcc-sponsors/iron/Interspacechat-logo.svg'
 
 const SponsorContainer = styled.div`
   width: 100%;
   height: 90%;
   // background-color: #b30602;
-  display: block;
+  display: grid;
   overflow-y: auto;
   flex-direction: column;
-  justify-content: center;
+  place-content: center;
 `
 
 const PoweredByGold = styled.div`
@@ -168,7 +168,7 @@ const SponsorshipInstance = () => {
         <Provider
           src={AaveLogo}
           width='auto'
-          height='35px'
+          height='25px'
           alt='Aave'
           onClick={() => openInNewTab('https://aave.com/')}
         />
@@ -196,7 +196,7 @@ const SponsorshipInstance = () => {
         <Provider
           src={YapLogo}
           width='auto'
-          height='35px'
+          height='20px'
           alt='Yap Global'
           onClick={() => openInNewTab('http://www.yapglobal.com/')}
         />
@@ -326,14 +326,14 @@ const SponsorshipInstance = () => {
         <Provider
           src={ApwineLogo}
           width='auto'
-          height='30px'
+          height='25px'
           alt='Apwine'
           onClick={() => openInNewTab('https://www.apwine.fi/')}
         />
         <Provider
           src={ArcadiaLogo}
           width='auto'
-          height='30px'
+          height='25px'
           alt='Arcadia Group'
           onClick={() => openInNewTab('https://arcadiamgroup.com/')}
         />
@@ -347,14 +347,14 @@ const SponsorshipInstance = () => {
         <Provider
           src={AurorastackLogo}
           width='auto'
-          height='30px'
+          height='40px'
           alt='Aurora Stack'
           onClick={() => openInNewTab('https://aurora.dev/')}
         />
         <Provider
           src={ComethLogo}
           width='auto'
-          height='30px'
+          height='20px'
           alt='Cometh'
           onClick={() => openInNewTab('https://cometh.io')}
         />
