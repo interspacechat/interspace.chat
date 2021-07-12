@@ -146,15 +146,11 @@ function FloatingRoomWindow () {
   const setStartingCoordinatesX = windowKey => {
     let windowOriginX = 20
     if (windowKey === 'Twitter') {
-      windowOriginX = width
-    } else if (
-      windowKey === 'Schedule' ||
-      windowKey === 'claim poap token' ||
-      windowKey === 'Status Chat'
-    ) {
+      windowOriginX = width * 1.11
+    } else if (windowKey === 'Schedule' || windowKey === 'claim poap token') {
       windowOriginX = width / 2
-    } else if (windowKey === 'stream1') {
-      windowOriginX = 40
+    } else if (windowKey === 'Status Chat') {
+      windowOriginX = 10
     } else if (windowKey === 'OpenSea' || windowKey === 'Sponsorships') {
       windowOriginX = width / 5
     } else if (windowKey === 'credits' || windowKey === 'Sign Up') {
@@ -177,15 +173,18 @@ function FloatingRoomWindow () {
     if (
       windowKey === 'stream2' ||
       windowKey === 'stream5' ||
-      windowKey === 'Status Chat' ||
-      windowKey === 'Twitter' ||
       windowKey === 'Auction'
     ) {
       windowOriginY = height / 2
     } else if (windowKey === 'stream1' || windowKey === 'stream6') {
       windowOriginY = 20
-    } else if (windowKey === 'Schedule') {
-      windowOriginY = 30
+    } else if (
+      windowKey === 'Twitter' ||
+      windowKey === 'Status Chat' ||
+      windowKey === 'Sponsorships' ||
+      windowKey === 'Schedule'
+    ) {
+      windowOriginY = 55
     } else if (windowKey === 'stream3' || windowKey === 'stream4') {
       windowOriginY = height + 10
     } else if (windowKey === 'Twitter') {
@@ -193,12 +192,11 @@ function FloatingRoomWindow () {
     } else if (
       windowKey === 'OpenSea' ||
       windowKey === 'livestream' ||
-      windowKey === 'Sponsorships' ||
       windowKey === 'claim poap token'
     ) {
       windowOriginY = height / 2 - 70
     } else {
-      windowOriginY = 40
+      windowOriginY = 55
     }
     return windowOriginY
   }
@@ -233,6 +231,8 @@ function FloatingRoomWindow () {
       windowWidth = width / 1.3
     } else if (windowKey === 'Sponsorships' || windowKey === 'OpenSea') {
       windowWidth = width * 1.6
+    } else if (windowKey === 'Twitter') {
+      windowWidth = width * 0.8
     } else {
       windowWidth = width - 20
     }
@@ -241,12 +241,14 @@ function FloatingRoomWindow () {
 
   const setStartingHeight = windowKey => {
     let windowHeight = height - 20
-    if (windowKey === 'Schedule') {
+    if (
+      windowKey === 'Schedule' ||
+      windowKey === 'Status Chat' ||
+      windowKey === 'Twitter'
+    ) {
       windowHeight = height * 1.8
     } else if (windowKey === 'Sponsorships' || windowKey === 'OpenSea') {
       windowHeight = height * 1.3
-    } else if (windowKey === 'Status Chat') {
-      windowHeight = height + 20
     } else {
       windowHeight = height - 20
     }
