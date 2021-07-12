@@ -16,7 +16,7 @@ import CalendarInstance from './integrations/CalendarInstance'
 import AboutInstance from './external-sites/AboutInstance'
 import BountiesInstance from './external-sites/BountiesInstance'
 import TwitterInstance from './integrations/TwitterInstance'
-import PartnersInstance from './integrations/PartnersInstance'
+import EthCCInstance from './external-sites/EthCCInstance'
 import OpenseaInstance from './external-sites/OpenseaInstance'
 import SponsorshipInstance from './SponsorshipInstance'
 import { useState } from 'react/cjs/react.production.min'
@@ -108,8 +108,8 @@ function getFloatingRoomWindow (windowKey) {
     return <YoutubeInstance />
   } else if (windowKey === 'stream6') {
     return <YoutubeInstance />
-  } else if (windowKey === 'Partners') {
-    return <PartnersInstance />
+  } else if (windowKey === 'EthCC') {
+    return <EthCCInstance />
   } else if (windowKey === null) {
     return null
   }
@@ -147,11 +147,15 @@ function FloatingRoomWindow () {
     let windowOriginX = 20
     if (windowKey === 'Twitter') {
       windowOriginX = width * 1.11
-    } else if (windowKey === 'Schedule' || windowKey === 'claim poap token') {
+    } else if (windowKey === 'Schedule') {
       windowOriginX = width / 2
     } else if (windowKey === 'Status Chat') {
       windowOriginX = 10
-    } else if (windowKey === 'OpenSea' || windowKey === 'Sponsorships') {
+    } else if (
+      windowKey === 'OpenSea' ||
+      windowKey === 'Sponsorships' ||
+      windowKey === 'EthCC'
+    ) {
       windowOriginX = width / 5
     } else if (windowKey === 'credits' || windowKey === 'Sign Up') {
       windowOriginX = width / 4
@@ -229,7 +233,11 @@ function FloatingRoomWindow () {
     let windowWidth = width - 20
     if (windowKey === 'Status Chat') {
       windowWidth = width / 1.3
-    } else if (windowKey === 'Sponsorships' || windowKey === 'OpenSea') {
+    } else if (
+      windowKey === 'Sponsorships' ||
+      windowKey === 'OpenSea' ||
+      windowKey === 'EthCC'
+    ) {
       windowWidth = width * 1.6
     } else if (windowKey === 'Twitter') {
       windowWidth = width * 0.8
@@ -244,7 +252,8 @@ function FloatingRoomWindow () {
     if (
       windowKey === 'Schedule' ||
       windowKey === 'Status Chat' ||
-      windowKey === 'Twitter'
+      windowKey === 'Twitter' ||
+      windowKey === 'EthCC'
     ) {
       windowHeight = height * 1.8
     } else if (windowKey === 'Sponsorships' || windowKey === 'OpenSea') {
@@ -273,9 +282,10 @@ function FloatingRoomWindow () {
     >
       <SpaceContainer>
         <SpaceHeader>
-          <SpaceHeaderElement onClick={() => closeFloatingSpace(windowKey)}>
-            <Closer />
+          <SpaceHeaderElement onTap={() => closeFloatingSpace(windowKey)}>
+            <Closer onClick={() => closeFloatingSpace(windowKey)} />
           </SpaceHeaderElement>
+
           <SpaceHeaderElement style={{ color: '#000000' }}>
             {windowKey}
           </SpaceHeaderElement>

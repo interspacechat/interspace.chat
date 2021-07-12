@@ -268,10 +268,7 @@ const EthCC = () => {
   return (
     <ImagemapContainer>
       <Grid>
-        <Cell5
-          onClick={() => openInNewTab('https://ethcc.io')}
-          className='click-zone'
-        >
+        <Cell5 onClick={() => addFloatingSpace('EthCC')} className='click-zone'>
           <img className='portal' src={EthCClogo} alt='' />
           <h1 className='title'>
             <strong style={{ fontSize: '2rem' }} className='bleu'>
