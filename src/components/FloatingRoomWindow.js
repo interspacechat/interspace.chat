@@ -19,6 +19,7 @@ import TwitterInstance from './integrations/TwitterInstance'
 import EthCCInstance from './external-sites/EthCCInstance'
 import OpenseaInstance from './external-sites/OpenseaInstance'
 import SponsorshipInstance from './SponsorshipInstance'
+import StatusInstance from './external-sites/StatusInstance'
 import { useState } from 'react/cjs/react.production.min'
 
 const width = window.innerWidth / 2
@@ -91,7 +92,7 @@ function getFloatingRoomWindow (windowKey) {
   } else if (windowKey === 'About') {
     return <AboutInstance />
   } else if (windowKey === 'Status Chat') {
-    return <ChatInstance />
+    return <StatusInstance />
   } else if (windowKey === 'Sponsorships') {
     return <SponsorshipInstance />
   } else if (windowKey === 'Twitter') {
@@ -251,12 +252,15 @@ function FloatingRoomWindow () {
     let windowHeight = height - 20
     if (
       windowKey === 'Schedule' ||
-      windowKey === 'Status Chat' ||
       windowKey === 'Twitter' ||
       windowKey === 'EthCC'
     ) {
       windowHeight = height * 1.8
-    } else if (windowKey === 'Sponsorships' || windowKey === 'OpenSea') {
+    } else if (
+      windowKey === 'Status Chat' ||
+      windowKey === 'Sponsorships' ||
+      windowKey === 'OpenSea'
+    ) {
       windowHeight = height * 1.3
     } else {
       windowHeight = height - 20
