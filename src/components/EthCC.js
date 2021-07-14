@@ -276,51 +276,47 @@ const EthCC = () => {
             </strong>
           </h1>
         </Cell5>
-        <Cell1 onClick={() => addFloatingSpace('stream1')}>
+        <Cell1 onClick={() => addFloatingSpace('Main Stage')}>
           <h1 className='title'>
-            STREAM
+            Main
             <br />
-            One
+            Stage
           </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell1>
-        <Cell2 onClick={() => addFloatingSpace('stream2')}>
+        <Cell2 onClick={() => addFloatingSpace('Monge')}>
           <h1 className='title'>
-            STREAM
+            Monge
             <br />
-            Two
           </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell2>
-        <Cell3 onClick={() => addFloatingSpace('stream3')}>
+        <Cell3 onClick={() => addFloatingSpace('Saint Germain')}>
           <h1 className='title'>
-            STREAM
+            Saint
             <br />
-            Three
+            Germain
           </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell3>
-        <Cell4 onClick={() => addFloatingSpace('stream4')}>
+        <Cell4 onClick={() => addFloatingSpace('Sorbonne')}>
           <h1 className='title'>
-            STREAM
+            Sorbonne
             <br />
-            Four
           </h1>
           <Balloon className='portal' color='#082d75' />
         </Cell4>
-        <Cell6 onClick={() => addFloatingSpace('stream5')}>
+        <Cell6 onClick={() => addFloatingSpace('Poissy')}>
           <h1 className='title'>
-            STREAM
+            Poissy
             <br />
-            Five
           </h1>
           <Balloon className='portal' color={'#082d75'} />
         </Cell6>
-        <Cell7 onClick={() => addFloatingSpace('stream6')}>
+        <Cell7 onClick={() => addFloatingSpace('Pontoise')}>
           <h1 className='title'>
-            STREAM
+            Pontoise
             <br />
-            Six
           </h1>
           <Balloon className='portal' color={'#082d75'} />
         </Cell7>

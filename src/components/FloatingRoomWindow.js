@@ -96,17 +96,17 @@ function getFloatingRoomWindow (windowKey) {
     return <SponsorshipInstance />
   } else if (windowKey === 'Twitter') {
     return <TwitterInstance />
-  } else if (windowKey === 'stream1') {
+  } else if (windowKey === 'Main Stage') {
     return <YoutubeInstance />
-  } else if (windowKey === 'stream2') {
+  } else if (windowKey === 'Monge') {
     return <YoutubeInstance />
-  } else if (windowKey === 'stream3') {
+  } else if (windowKey === 'Saint Germain') {
     return <YoutubeInstance />
-  } else if (windowKey === 'stream4') {
+  } else if (windowKey === 'Sorbonne') {
     return <YoutubeInstance />
-  } else if (windowKey === 'stream5') {
+  } else if (windowKey === 'Poissy') {
     return <YoutubeInstance />
-  } else if (windowKey === 'stream6') {
+  } else if (windowKey === 'Pontoise') {
     return <YoutubeInstance />
   } else if (windowKey === 'EthCC') {
     return <EthCCInstance />
@@ -162,9 +162,9 @@ function FloatingRoomWindow () {
     } else if (windowKey === 'About' || windowKey === 'claim poap token') {
       windowOriginX = width / 3
     } else if (
-      windowKey === 'stream4' ||
-      windowKey === 'stream5' ||
-      windowKey === 'stream6'
+      windowKey === 'Sorbonne' ||
+      windowKey === 'Poissy' ||
+      windowKey === 'Pontoise'
     ) {
       windowOriginX = width
     } else {
@@ -175,12 +175,12 @@ function FloatingRoomWindow () {
   const setStartingCoordinatesY = windowKey => {
     let windowOriginY = 40
     if (
-      windowKey === 'stream2' ||
-      windowKey === 'stream5' ||
+      windowKey === 'Monge' ||
+      windowKey === 'Poissy' ||
       windowKey === 'Auction'
     ) {
       windowOriginY = height / 2
-    } else if (windowKey === 'stream1' || windowKey === 'stream6') {
+    } else if (windowKey === 'Main Stage' || windowKey === 'Pontoise') {
       windowOriginY = 20
     } else if (
       windowKey === 'Twitter' ||
@@ -189,7 +189,7 @@ function FloatingRoomWindow () {
       windowKey === 'Schedule'
     ) {
       windowOriginY = 55
-    } else if (windowKey === 'stream3' || windowKey === 'stream4') {
+    } else if (windowKey === 'Saint Germain' || windowKey === 'Sorbonne') {
       windowOriginY = height + 10
     } else if (windowKey === 'Twitter') {
       windowOriginY = height / 2
@@ -211,12 +211,12 @@ function FloatingRoomWindow () {
     if (windowKey === 'Partners' || windowKey === 'Workshops') {
       bgColor = '#C1B7A3DD'
     } else if (
-      windowKey === 'stream1' ||
-      windowKey === 'stream2' ||
-      windowKey === 'stream3' ||
-      windowKey === 'stream4' ||
-      windowKey === 'stream5' ||
-      windowKey === 'stream6'
+      windowKey === 'Main Stage' ||
+      windowKey === 'Monge' ||
+      windowKey === 'Saint Germain' ||
+      windowKey === 'Sorbonne' ||
+      windowKey === 'Poissy' ||
+      windowKey === 'Pontoise'
     ) {
       bgColor = '#b30602DD'
     } else if (windowKey === 'Status Chat' || windowKey === 'OpenSea') {
